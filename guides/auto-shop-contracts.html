@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auto Shop Contracts Stat Editor Guide — Social Club</title>
+    <meta
+      name="description"
+      content="A consolidated guide for skipping Auto Shop contract prep missions and selecting the active contract through the TUNER stats in GTAHaX for GTA Online."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/guide.css" />
+  </head>
+  <body>
+    <!-- TOP BAR -->
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="logo" href="../index.html">
+          <div class="logo-mark">R</div>
+          <div class="logo-text">ROCKSTAR<span>*</span></div>
+        </a>
+        <nav>
+          <a href="#prereq">Prerequisites</a>
+          <a href="#contract">Select Contract</a>
+          <a href="#preps">Skip Preps</a>
+          <a href="#reference">Quick Ref</a>
+        </nav>
+        <div class="user-chip">
+          <div class="user-avatar">H</div>
+          <div class="user-meta">
+            <div class="name">Heist_Operator</div>
+            <div class="rank">Crew Leader</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-grid"></div>
+      <div class="hero-inner">
+        <div class="crumb fade" style="animation-delay: 0s">
+          <a href="../index.html">Social Club</a><span class="sep">/</span>
+          <a href="../index.html">Guides</a><span class="sep">/</span>
+          <a href="../index.html">Heists</a><span class="sep">/</span>
+          <span>Auto Shop Contracts</span>
+        </div>
+        <div class="hero-tag fade" style="animation-delay: 0.05s">
+          Community Guide
+        </div>
+        <h1 class="fade" style="animation-delay: 0.1s">
+          Auto Shop <span class="accent">Contracts</span><br /><span
+            class="stroke"
+            >Stat Editor</span
+          >
+          Guide
+        </h1>
+        <p class="hero-sub fade" style="animation-delay: 0.2s">
+          A consolidated walkthrough for editing the Los Santos Tuners Auto Shop
+          contracts through GTAHaX. Pick which contract is active, then skip
+          every prep mission and jump straight to the finale.
+        </p>
+        <div class="hero-meta fade" style="animation-delay: 0.3s">
+          <div class="item">
+            <span class="label">Feature</span
+            ><span class="value">Auto Shop Contracts</span>
+          </div>
+          <div class="item">
+            <span class="label">Tool</span><span class="value">GTAHaXUI</span>
+          </div>
+          <div class="item">
+            <span class="label">Update</span
+            ><span class="value">Los Santos Tuners</span>
+          </div>
+          <div class="item">
+            <span class="label">Difficulty</span
+            ><span class="value accent">Beginner</span>
+          </div>
+          <div class="item">
+            <span class="label">Updated</span><span class="value">v1.0</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN -->
+    <div class="shell">
+      <!-- TOC -->
+      <aside class="toc">
+        <div class="toc-label">Contents</div>
+        <ul>
+          <li>
+            <a href="#prereq"><span class="toc-num">00</span>Prerequisites</a>
+          </li>
+          <li>
+            <a href="#slot"><span class="toc-num">01</span>Character Slot</a>
+          </li>
+          <li>
+            <a href="#contract"
+              ><span class="toc-num">02</span>Select Contract</a
+            >
+          </li>
+          <li>
+            <a href="#preps"><span class="toc-num">03</span>Skip Preps</a>
+          </li>
+          <li>
+            <a href="#finale"><span class="toc-num">04</span>Launch Finale</a>
+          </li>
+          <li>
+            <a href="#reference"
+              ><span class="toc-num">05</span>Quick Reference</a
+            >
+          </li>
+          <li>
+            <a href="#safety"><span class="toc-num">06</span>Safety Notes</a>
+          </li>
+          <li>
+            <a href="#source"
+              ><span class="toc-num">07</span>Source &amp; Credit</a
+            >
+          </li>
+        </ul>
+      </aside>
+
+      <!-- ARTICLE -->
+      <main class="article">
+        <div class="alert">
+          <strong>READ FIRST —</strong> The Auto Shop contract stats use the
+          <strong>TUNER</strong> prefix. All editing should be done in an
+          <strong>invite-only session</strong>, outside of any active contract,
+          before launching the prep or finale.
+        </div>
+
+        <!-- PREREQ -->
+        <section class="block" id="prereq">
+          <div class="section-head">
+            <span class="section-num">00</span>
+            <h2>Prerequisites</h2>
+            <span class="kicker">Before you begin</span>
+          </div>
+          <ul class="bullets">
+            <li>
+              <strong>GTAHaXUI</strong> (external) or another Stat Editor
+              compatible with the Los Santos Tuners update.
+            </li>
+            <li>
+              An <strong>Auto Shop</strong> must be purchased &amp; set up —
+              you've bought the property and access the contract board inside.
+            </li>
+            <li>
+              Join an <strong>invite-only session</strong> before writing any
+              stats.
+            </li>
+            <li>
+              Write stats <strong>outside an active contract</strong>, then
+              start the contract from the Auto Shop board.
+            </li>
+          </ul>
+        </section>
+
+        <!-- CHARACTER SLOT -->
+        <section class="block" id="slot">
+          <div class="section-head">
+            <span class="section-num">01</span>
+            <h2>Character Slot</h2>
+            <span class="kicker">MP prefix</span>
+          </div>
+          <p>
+            The Auto Shop stats are published as
+            <code
+              style="
+                font-family: var(--font-mono);
+                color: var(--accent);
+                background: rgba(252, 175, 23, 0.08);
+                padding: 2px 8px;
+              "
+              >$MPx_TUNER_…</code
+            >, where <strong>x</strong> is your character slot. Use
+            <code
+              style="
+                font-family: var(--font-mono);
+                color: var(--accent);
+                background: rgba(252, 175, 23, 0.08);
+                padding: 2px 8px;
+              "
+              >$MP0_</code
+            >
+            for your first character and
+            <code
+              style="
+                font-family: var(--font-mono);
+                color: var(--accent);
+                background: rgba(252, 175, 23, 0.08);
+                padding: 2px 8px;
+              "
+              >$MP1_</code
+            >
+            for your second. All examples in this guide use
+            <strong>$MP0_</strong>.
+          </p>
+        </section>
+
+        <!-- SELECT CONTRACT -->
+        <section class="block" id="contract">
+          <div class="section-head">
+            <span class="section-num">02</span>
+            <h2>Select the Active Contract</h2>
+            <span class="kicker">$MP0_TUNER_CURRENT</span>
+          </div>
+          <p class="lead">
+            The stat <strong>$MP0_TUNER_CURRENT</strong> sets which Auto Shop
+            contract is currently active on the planning board. Pick the one you
+            want, write the value, then open the board to start it.
+          </p>
+          <div class="stat-card">
+            <div class="stat-card-head">
+              <span class="stat-name">$MP0_TUNER_CURRENT</span>
+              <h3>Active Contract</h3>
+              <button class="copy-btn" data-copy="$MP0_TUNER_CURRENT">
+                Copy
+              </button>
+            </div>
+            <ul class="value-list">
+              <li>
+                <span class="val">0</span
+                ><span class="desc">The Union Depository</span>
+              </li>
+              <li>
+                <span class="val">1</span
+                ><span class="desc">The Superdollar Deal</span>
+              </li>
+              <li>
+                <span class="val">2</span
+                ><span class="desc">The Bank Contract</span>
+              </li>
+              <li>
+                <span class="val">3</span><span class="desc">The ECU Job</span>
+              </li>
+              <li>
+                <span class="val">4</span
+                ><span class="desc">The Prison Contract</span>
+              </li>
+              <li>
+                <span class="val">5</span
+                ><span class="desc">The Agency Deal</span>
+              </li>
+              <li>
+                <span class="val">6</span
+                ><span class="desc">The LOST Contract</span>
+              </li>
+              <li>
+                <span class="val">7</span
+                ><span class="desc">The Data Contract</span>
+              </li>
+            </ul>
+            <p style="margin-top: 16px; margin-bottom: 0">
+              Type the stat name in the Name field, enter the value number for
+              the contract you want, and click <strong>Write</strong>.
+            </p>
+          </div>
+        </section>
+
+        <!-- SKIP PREPS -->
+        <section class="block" id="preps">
+          <div class="section-head">
+            <span class="section-num">03</span>
+            <h2>Skip All Prep Missions</h2>
+            <span class="kicker">$MP0_TUNER_GEN_BS</span>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-head">
+              <span class="stat-name">$MP0_TUNER_GEN_BS</span>
+              <h3>Skip Preps</h3>
+              <button class="copy-btn" data-copy="$MP0_TUNER_GEN_BS">
+                Copy
+              </button>
+            </div>
+            <div class="single-value">
+              <span class="lbl">Value</span>
+              <span class="num">12543</span>
+            </div>
+            <p style="margin-top: 16px; margin-bottom: 0">
+              Writing <strong>12543</strong> to this stat marks all prep
+              missions for the active contract as complete. After writing this,
+              no preps need to be done — the contract finale is ready to launch
+              from the Auto Shop board.
+            </p>
+          </div>
+        </section>
+
+        <!-- LAUNCH FINALE -->
+        <section class="block" id="finale">
+          <div class="section-head">
+            <span class="section-num">04</span>
+            <h2>Launch the Finale</h2>
+            <span class="kicker">From the board</span>
+          </div>
+          <p>
+            To skip every prep and go straight to the finale, first set
+            <strong>$MP0_TUNER_CURRENT</strong> to the contract you want, then
+            set <strong>$MP0_TUNER_GEN_BS</strong> to <strong>12543</strong>.
+            Return to the Auto Shop planning board and the finale will be ready
+            to launch — no prep missions required.
+          </p>
+        </section>
+
+        <!-- QUICK REFERENCE -->
+        <section class="block" id="reference">
+          <div class="section-head">
+            <span class="section-num">05</span>
+            <h2>Quick Reference</h2>
+            <span class="kicker">Copy-paste combos</span>
+          </div>
+          <div class="quickref">
+            <div class="qr-card">
+              <h3>Any Contract + Skip Preps</h3>
+              <div class="qr-sub">Jump straight to the finale</div>
+              <div class="table-wrap" style="margin-bottom: 0; border: none">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Stat</th>
+                      <th>Value</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>$MP0_TUNER_CURRENT</code></td>
+                      <td><span class="num">0–7</span></td>
+                    </tr>
+                    <tr>
+                      <td><code>$MP0_TUNER_GEN_BS</code></td>
+                      <td><span class="num">12543</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="qr-card">
+              <h3>Example: The Union Depository</h3>
+              <div class="qr-sub">First contract, preps skipped</div>
+              <div class="table-wrap" style="margin-bottom: 0; border: none">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Stat</th>
+                      <th>Value</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>$MP0_TUNER_CURRENT</code></td>
+                      <td><span class="num">0</span></td>
+                    </tr>
+                    <tr>
+                      <td><code>$MP0_TUNER_GEN_BS</code></td>
+                      <td><span class="num">12543</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SAFETY -->
+        <section class="block" id="safety">
+          <div class="section-head">
+            <span class="section-num">06</span>
+            <h2>Detection &amp; Safety</h2>
+            <span class="kicker">Use at your own risk</span>
+          </div>
+          <div class="safety">
+            <h3>No cheat method is risk-free</h3>
+            <p>
+              Stat editing is considered as safe as any other cheat method, but
+              no approach is completely risk-free. Playing in
+              <strong>invite-only sessions</strong> with BattlEye disabled
+              reduces risk. As with any stat manipulation, there's always a
+              chance of detection or account action — use at your own
+              discretion.
+            </p>
+          </div>
+        </section>
+
+        <!-- SOURCE -->
+        <section class="block" id="source">
+          <div class="section-head">
+            <span class="section-num">07</span>
+            <h2>Source &amp; Credit</h2>
+            <span class="kicker">Original findings</span>
+          </div>
+          <p>
+            The <strong>TUNER</strong> stat findings were published by
+            <strong>gtahacs</strong> on the UnKnoWnCheaTs thread
+            <em>"How to skip autoshop contract preps?"</em> (1st August 2021).
+            This guide consolidates those findings into the Social Club guide
+            format.
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="foot-inner">
+        <div>© Community Guide · Not affiliated with Rockstar Games</div>
+        <div class="foot-links">
+          <a href="#">Top</a>
+          <a href="#reference">Quick Ref</a>
+          <a href="#safety">Safety</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../assets/js/guide.js"></script>
+  </body>
+</html>
