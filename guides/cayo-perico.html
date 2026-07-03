@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cayo Perico Heist Stat Editor Guide — Social Club</title>
+    <meta
+      name="description"
+      content="A consolidated guide for editing the Cayo Perico Heist using the Stat Editor in YimMenu and external stat editors for GTA V Enhanced."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/guide.css" />
+  </head>
+  <body>
+    <!-- TOP BAR -->
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="logo" href="../index.html">
+          <div class="logo-mark">R</div>
+          <div class="logo-text">ROCKSTAR<span>*</span></div>
+        </a>
+        <nav>
+          <a href="#prereq">Prerequisites</a>
+          <a href="#primary">Primary Target</a>
+          <a href="#preps">Skip Preps</a>
+          <a href="#loot">Loot</a>
+          <a href="#reference">Quick Ref</a>
+        </nav>
+        <div class="user-chip">
+          <div class="user-avatar">H</div>
+          <div class="user-meta">
+            <div class="name">Heist_Operator</div>
+            <div class="rank">Crew Leader</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-grid"></div>
+      <div class="hero-inner">
+        <div class="crumb fade" style="animation-delay: 0s">
+          <a href="../index.html">Social Club</a><span class="sep">/</span>
+          <a href="../index.html">Guides</a><span class="sep">/</span>
+          <a href="../index.html">Heists</a><span class="sep">/</span>
+          <span>Cayo Perico Stat Editor</span>
+        </div>
+        <div class="hero-tag fade" style="animation-delay: 0.05s">
+          Community Guide
+        </div>
+        <h1 class="fade" style="animation-delay: 0.1s">
+          Cayo Perico <span class="accent">Heist</span><br /><span
+            class="stroke"
+            >Stat Editor</span
+          >
+          Guide
+        </h1>
+        <p class="hero-sub fade" style="animation-delay: 0.2s">
+          A consolidated walkthrough for editing the Cayo Perico Heist through
+          the Stat Editor in YimMenu — and external stat editors for GTA V
+          Enhanced. Skip the grind, set your target, control your payout.
+        </p>
+        <div class="hero-meta fade" style="animation-delay: 0.3s">
+          <div class="item">
+            <span class="label">Heist</span
+            ><span class="value">The Cayo Perico Heist</span>
+          </div>
+          <div class="item">
+            <span class="label">Tool</span
+            ><span class="value">YimMenu v2 / Stat Editor</span>
+          </div>
+          <div class="item">
+            <span class="label">Difficulty</span
+            ><span class="value accent">Intermediate</span>
+          </div>
+          <div class="item">
+            <span class="label">Updated</span><span class="value">v1.0</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN -->
+    <div class="shell">
+      <!-- TOC -->
+      <aside class="toc">
+        <div class="toc-label">Contents</div>
+        <ul>
+          <li>
+            <a href="#prereq"><span class="toc-num">00</span>Prerequisites</a>
+          </li>
+          <li>
+            <a href="#slot"><span class="toc-num">01</span>Character Slot</a>
+          </li>
+          <li>
+            <a href="#setup"
+              ><span class="toc-num">02</span>Setup &amp; Intel</a
+            >
+          </li>
+          <li>
+            <a href="#primary"><span class="toc-num">03</span>Primary Target</a>
+          </li>
+          <li>
+            <a href="#weapons"
+              ><span class="toc-num">04</span>Weapons Loadout</a
+            >
+          </li>
+          <li>
+            <a href="#preps"><span class="toc-num">05</span>Skip Preps</a>
+          </li>
+          <li>
+            <a href="#hardmode"><span class="toc-num">06</span>Hard Mode</a>
+          </li>
+          <li>
+            <a href="#loot"><span class="toc-num">07</span>Secondary Loot</a>
+          </li>
+          <li>
+            <a href="#reference"
+              ><span class="toc-num">08</span>Quick Reference</a
+            >
+          </li>
+          <li>
+            <a href="#safety"><span class="toc-num">09</span>Safety Notes</a>
+          </li>
+          <li>
+            <a href="#enhanced"
+              ><span class="toc-num">10</span>GTA V Enhanced</a
+            >
+          </li>
+        </ul>
+      </aside>
+
+      <!-- ARTICLE -->
+      <main class="article">
+        <div class="alert">
+          <strong>READ FIRST —</strong> All stat editing must be performed
+          <strong>outside the submarine</strong>, after completing the Intel
+          mission. The heist must already be set up (initial setup cost paid).
+        </div>
+
+        <!-- PREREQ -->
+        <section class="block" id="prereq">
+          <div class="section-head">
+            <span class="section-num">00</span>
+            <h2>Prerequisites</h2>
+            <span class="kicker">Before you begin</span>
+          </div>
+          <ul class="bullets">
+            <li>
+              <strong>YimMenu v2</strong> — or an external Stats Editor
+              compatible with GTA V Enhanced.
+            </li>
+            <li>
+              The heist must be <strong>set up</strong> — you've paid the
+              initial setup cost.
+            </li>
+            <li>
+              You need to complete the <strong>Intel mission</strong> first,
+              before editing any stats.
+            </li>
+            <li>
+              All stat editing should be done
+              <strong>outside the submarine</strong> after completing intel.
+            </li>
+          </ul>
+        </section>
+
+        <!-- CHARACTER SLOT -->
+        <section class="block" id="slot">
+          <div class="section-head">
+            <span class="section-num">01</span>
+            <h2>Character Slot</h2>
+            <span class="kicker">MP prefix</span>
+          </div>
+          <p>
+            Use
+            <code
+              style="
+                font-family: var(--font-mono);
+                color: var(--accent);
+                background: rgba(252, 175, 23, 0.08);
+                padding: 2px 8px;
+              "
+              >$MP0_</code
+            >
+            for your first character and
+            <code
+              style="
+                font-family: var(--font-mono);
+                color: var(--accent);
+                background: rgba(252, 175, 23, 0.08);
+                padding: 2px 8px;
+              "
+              >$MP1_</code
+            >
+            for your second character. All examples in this guide use
+            <strong>$MP0_</strong>.
+          </p>
+        </section>
+
+        <!-- SETUP & INTEL -->
+        <section class="block" id="setup">
+          <div class="section-head">
+            <span class="section-num">02</span>
+            <h2>Setup &amp; Intel</h2>
+            <span class="kicker">Step-by-step</span>
+          </div>
+          <div class="step">
+            <div class="step-num">01</div>
+            <div>
+              <h3>Pay to set up the heist</h3>
+              <p>
+                Start the heist from the submarine. Pay the initial setup cost
+                to begin the Cayo Perico Heist sequence.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">02</div>
+            <div>
+              <h3>Start &amp; complete the Intel mission</h3>
+              <p>
+                Go outside the submarine, teleport to the Velum, and fly to Cayo
+                Perico. Complete the intel mission on the island — you can spawn
+                an Oppressor Mk2 to speed this up.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">03</div>
+            <div>
+              <h3>Return to Los Santos</h3>
+              <p>
+                Once intel is complete, return to the city. You're now ready to
+                begin editing stats — remember to stay
+                <strong>outside the submarine</strong>.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- PRIMARY TARGET -->
+        <section class="block" id="primary">
+          <div class="section-head">
+            <span class="section-num">03</span>
+            <h2>Edit Primary Target</h2>
+            <span class="kicker">$MP0_H4CNF_TARGET</span>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-head">
+              <span class="stat-name">$MP0_H4CNF_TARGET</span>
+              <h3>Primary Target</h3>
+              <button class="copy-btn" data-copy="$MP0_H4CNF_TARGET">
+                Copy
+              </button>
+            </div>
+            <ul class="value-list">
+              <li>
+                <span class="val">0</span><span class="desc">Tequila</span>
+              </li>
+              <li><span class="val">1</span><span class="desc">Ruby</span></li>
+              <li>
+                <span class="val">2</span><span class="desc">Bearer Bonds</span>
+              </li>
+              <li>
+                <span class="val">3</span><span class="desc">Pink Diamond</span>
+              </li>
+              <li>
+                <span class="val">4</span
+                ><span class="desc">Madrazo Files</span>
+              </li>
+              <li>
+                <span class="val">5</span
+                ><span class="desc">Panther Statue</span>
+              </li>
+            </ul>
+            <p style="margin-top: 16px; margin-bottom: 0">
+              Type the stat name in the Name field, enter the value number, and
+              click <strong>Write</strong>. For the Pink Diamond, use value
+              <strong>3</strong>.
+            </p>
+          </div>
+        </section>
+
+        <!-- WEAPONS -->
+        <section class="block" id="weapons">
+          <div class="section-head">
+            <span class="section-num">04</span>
+            <h2>Edit Weapons Loadout</h2>
+            <span class="kicker">$MP0_H4CNF_WEAPONS</span>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-head">
+              <span class="stat-name">$MP0_H4CNF_WEAPONS</span>
+              <h3>Weapons Loadout</h3>
+              <button class="copy-btn" data-copy="$MP0_H4CNF_WEAPONS">
+                Copy
+              </button>
+            </div>
+            <ul class="value-list">
+              <li>
+                <span class="val">1</span
+                ><span class="desc"
+                  >Aggressor — Assault Shotgun + Machine Pistol + Machete +
+                  Grenade</span
+                >
+              </li>
+              <li>
+                <span class="val">2</span
+                ><span class="desc"
+                  >Conspirator — Military Rifle + AP Pistol + Knuckles +
+                  Stickies</span
+                >
+              </li>
+              <li>
+                <span class="val">3</span
+                ><span class="desc"
+                  >Crackshot — Sniper + AP Pistol + Knife + Molotov</span
+                >
+              </li>
+              <li>
+                <span class="val">4</span
+                ><span class="desc"
+                  >Saboteur — SMG Mk2 + SNS Pistol + Knife + Pipe Bomb</span
+                >
+              </li>
+              <li>
+                <span class="val">5</span
+                ><span class="desc"
+                  >Marksman — AK-47 + Pistol .50 + Machete + Pipe Bomb</span
+                >
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- SKIP PREPS -->
+        <section class="block" id="preps">
+          <div class="section-head">
+            <span class="section-num">05</span>
+            <h2>Skip All Prep Missions</h2>
+            <span class="kicker">$MP0_H4_MISSIONS</span>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-head">
+              <span class="stat-name">$MP0_H4_MISSIONS</span>
+              <h3>Skip Preps</h3>
+              <button class="copy-btn" data-copy="$MP0_H4_MISSIONS">
+                Copy
+              </button>
+            </div>
+            <div class="single-value">
+              <span class="lbl">Value</span>
+              <span class="num">-1</span>
+            </div>
+            <p style="margin-top: 16px; margin-bottom: 0">
+              This marks all prep missions as complete. After writing this, no
+              preps need to be done — the heist finale is ready to launch.
+            </p>
+          </div>
+        </section>
+
+        <!-- HARD MODE -->
+        <section class="block" id="hardmode">
+          <div class="section-head">
+            <span class="section-num">06</span>
+            <h2>Enable Hard Mode</h2>
+            <span class="kicker">Optional · Higher payout</span>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-head">
+              <span class="stat-name">$MP0_H4_PROGRESS</span>
+              <h3>Hard Mode</h3>
+              <button class="copy-btn" data-copy="$MP0_H4_PROGRESS">
+                Copy
+              </button>
+            </div>
+            <div class="single-value">
+              <span class="lbl">Value</span>
+              <span class="num">130415</span>
+            </div>
+            <p style="margin-top: 16px; margin-bottom: 0">
+              Hard mode increases payout across the board.
+            </p>
+          </div>
+        </section>
+
+        <!-- SECONDARY LOOT -->
+        <section class="block" id="loot">
+          <div class="section-head">
+            <span class="section-num">07</span>
+            <h2>Secondary Objectives</h2>
+            <span class="kicker">Loot control</span>
+          </div>
+          <p class="lead">
+            Secondary loot is controlled by stats that specify what type of loot
+            appears on the Island vs. inside the Compound — plus the value of
+            that loot.
+          </p>
+          <p>The naming convention uses:</p>
+          <ul class="bullets">
+            <li><strong>I</strong> — Island locations</li>
+            <li><strong>C</strong> — Compound locations</li>
+            <li><strong>V</strong> — Value</li>
+          </ul>
+
+          <div class="table-wrap">
+            <table class="loot">
+              <thead>
+                <tr>
+                  <th>Stat</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>$MP0_H4LOOT_CASH_I</code></td>
+                  <td>Cash on the island</td>
+                </tr>
+                <tr>
+                  <td><code>$MP0_H4LOOT_CASH_C</code></td>
+                  <td>Cash in the compound</td>
+                </tr>
+                <tr>
+                  <td><code>$MP0_H4LOOT_CASH_V</code></td>
+                  <td>Cash value</td>
+                </tr>
+                <tr>
+                  <td><code>$MP0_H4LOOT_WEED_I</code></td>
+                  <td>Weed on the island</td>
+                </tr>
+                <tr>
+                  <td><code>$MP0_H4LOOT_WEED_C</code></td>
+                  <td>Weed in the compound</td>
+                </tr>
+                <tr>
+                  <td><code>$MP0_H4LOOT_WEED_V</code></td>
+                  <td>Weed value</td>
+                </tr>
+                <tr>
+                  <td><code>$MP0_H4LOOT_COKE_I</code></td>
+                  <td>Cocaine on the island</td>
+                </tr>
+                <tr>
+                  <td><code>$MP0_H4LOOT_COKE_C</code></td>
+                  <td>Cocaine in the compound</td>
+                </tr>
+                <tr>
+                  <td><code>$MP0_H4LOOT_COKE_V</code></td>
+                  <td>Cocaine value</td>
+                </tr>
+                <tr>
+                  <td><code>$MP0_H4LOOT_GOLD_I</code></td>
+                  <td>Gold on the island</td>
+                </tr>
+                <tr>
+                  <td><code>$MP0_H4LOOT_GOLD_C</code></td>
+                  <td>Gold in the compound</td>
+                </tr>
+                <tr>
+                  <td><code>$MP0_H4LOOT_GOLD_V</code></td>
+                  <td>Gold value</td>
+                </tr>
+                <tr>
+                  <td><code>$MP0_H4LOOT_PAINT</code></td>
+                  <td>Paintings (compound)</td>
+                </tr>
+                <tr>
+                  <td><code>$MP0_H4LOOT_PAINT_V</code></td>
+                  <td>Paintings value</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            You can only set <strong>all</strong> secondary objectives in a
+            given location to one type. For example, to set all island loot to
+            gold and all compound loot to paintings:
+          </p>
+          <ul class="bullets">
+            <li>
+              <code style="font-family: var(--font-mono); color: var(--accent)"
+                >$MP0_H4LOOT_GOLD_I</code
+              >
+              = <strong>-1</strong>
+            </li>
+            <li>
+              <code style="font-family: var(--font-mono); color: var(--accent)"
+                >$MP0_H4LOOT_PAINT</code
+              >
+              = <strong>-1</strong>
+            </li>
+            <li>
+              Set all other
+              <code style="font-family: var(--font-mono); color: var(--accent)"
+                >_I</code
+              >
+              and
+              <code style="font-family: var(--font-mono); color: var(--accent)"
+                >_C</code
+              >
+              stats to <strong>0</strong>
+            </li>
+          </ul>
+          <p>
+            The
+            <code style="font-family: var(--font-mono); color: var(--accent)"
+              >_V</code
+            >
+            stats let you set the actual monetary value of the loot directly.
+          </p>
+        </section>
+
+        <!-- QUICK REFERENCE -->
+        <section class="block" id="reference">
+          <div class="section-head">
+            <span class="section-num">08</span>
+            <h2>Quick Reference</h2>
+            <span class="kicker">Copy-paste combos</span>
+          </div>
+          <div class="quickref">
+            <div class="qr-card">
+              <h3>Pink Diamond + Aggressor</h3>
+              <div class="qr-sub">Skip all preps</div>
+              <div class="table-wrap" style="margin-bottom: 0; border: none">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Stat</th>
+                      <th>Value</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>$MP0_H4CNF_TARGET</code></td>
+                      <td><span class="num">3</span></td>
+                    </tr>
+                    <tr>
+                      <td><code>$MP0_H4CNF_WEAPONS</code></td>
+                      <td><span class="num">1</span></td>
+                    </tr>
+                    <tr>
+                      <td><code>$MP0_H4_MISSIONS</code></td>
+                      <td><span class="num">-1</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="qr-card">
+              <h3>Panther Statue + Hard Mode</h3>
+              <div class="qr-sub">Maximum payout</div>
+              <div class="table-wrap" style="margin-bottom: 0; border: none">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Stat</th>
+                      <th>Value</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>$MP0_H4CNF_TARGET</code></td>
+                      <td><span class="num">5</span></td>
+                    </tr>
+                    <tr>
+                      <td><code>$MP0_H4_PROGRESS</code></td>
+                      <td><span class="num">130415</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SAFETY -->
+        <section class="block" id="safety">
+          <div class="section-head">
+            <span class="section-num">09</span>
+            <h2>Detection &amp; Safety</h2>
+            <span class="kicker">Use at your own risk</span>
+          </div>
+          <div class="safety">
+            <h3>No cheat method is risk-free</h3>
+            <p>
+              According to experienced users in the thread, editing heist setup
+              stats is considered as safe as any other cheat method. Playing in
+              <strong>invite-only sessions</strong> with BattlEye disabled
+              reduces risk. Users report setting finale payouts to maximum
+              values across multiple heists (e.g., $2.5M for Cayo and Bogdan,
+              $3.5M for Diamond Casino) without issues.
+            </p>
+            <p style="margin-top: 14px">
+              However, there's always some chance of detection or account action
+              — so use at your own discretion.
+            </p>
+          </div>
+        </section>
+
+        <!-- ENHANCED -->
+        <section class="block" id="enhanced">
+          <div class="section-head">
+            <span class="section-num">10</span>
+            <h2>GTA V Enhanced</h2>
+            <span class="kicker">Compatibility</span>
+          </div>
+          <div class="enhanced">
+            <div class="enhanced-badge">Enhanced</div>
+            <p>
+              The original YimMenu heist editor
+              <strong>does not work</strong> with GTA V Enhanced. For the
+              Enhanced version, use an external Stats Editor tool (referenced in
+              the thread as <em>"Stats Editor[External] (Enhanced)"</em>). The
+              stat names and values remain the same.
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="foot-inner">
+        <div>© Community Guide · Not affiliated with Rockstar Games</div>
+        <div class="foot-links">
+          <a href="#">Top</a>
+          <a href="#reference">Quick Ref</a>
+          <a href="#safety">Safety</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../assets/js/guide.js"></script>
+  </body>
+</html>
