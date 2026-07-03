@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clukin' Bell Heist Stat Editor Guide — Social Club</title>
+    <meta
+      name="description"
+      content="A consolidated guide for editing the Clukin' Bell Heist using an external Stat Editor for GTA Online — remove the cooldown and control heist progress via the SALV23 stats."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/guide.css" />
+  </head>
+  <body>
+    <!-- TOP BAR -->
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="logo" href="../index.html">
+          <div class="logo-mark">R</div>
+          <div class="logo-text">ROCKSTAR<span>*</span></div>
+        </a>
+        <nav>
+          <a href="#prereq">Prerequisites</a>
+          <a href="#cooldown">Cooldown</a>
+          <a href="#progress">Progress</a>
+          <a href="#reference">Quick Ref</a>
+        </nav>
+        <div class="user-chip">
+          <div class="user-avatar">H</div>
+          <div class="user-meta">
+            <div class="name">Heist_Operator</div>
+            <div class="rank">Crew Leader</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-grid"></div>
+      <div class="hero-inner">
+        <div class="crumb fade" style="animation-delay: 0s">
+          <a href="../index.html">Social Club</a><span class="sep">/</span>
+          <a href="../index.html">Guides</a><span class="sep">/</span>
+          <a href="../index.html">Heists</a><span class="sep">/</span>
+          <span>Clukin' Bell Heist</span>
+        </div>
+        <div class="hero-tag fade" style="animation-delay: 0.05s">
+          Community Guide
+        </div>
+        <h1 class="fade" style="animation-delay: 0.1s">
+          Clukin' Bell <span class="accent">Heist</span><br /><span
+            class="stroke"
+            >Stat Editor</span
+          >
+          Guide
+        </h1>
+        <p class="hero-sub fade" style="animation-delay: 0.2s">
+          A consolidated walkthrough for editing the Clukin' Bell Heist through
+          an external Stat Editor. Remove the cooldown, jump straight to the
+          finale, and control your heist progress with the
+          <strong>SALV23</strong> stats.
+        </p>
+        <div class="hero-meta fade" style="animation-delay: 0.3s">
+          <div class="item">
+            <span class="label">Heist</span
+            ><span class="value">The Clukin' Bell Heist</span>
+          </div>
+          <div class="item">
+            <span class="label">Tool</span
+            ><span class="value">GTAHaX / Stat Editor</span>
+          </div>
+          <div class="item">
+            <span class="label">Game</span
+            ><span class="value">GTA Online 1.70</span>
+          </div>
+          <div class="item">
+            <span class="label">Difficulty</span
+            ><span class="value accent">Beginner</span>
+          </div>
+          <div class="item">
+            <span class="label">Updated</span><span class="value">v1.0</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN -->
+    <div class="shell">
+      <!-- TOC -->
+      <aside class="toc">
+        <div class="toc-label">Contents</div>
+        <ul>
+          <li>
+            <a href="#prereq"><span class="toc-num">00</span>Prerequisites</a>
+          </li>
+          <li>
+            <a href="#slot"><span class="toc-num">01</span>Character Slot</a>
+          </li>
+          <li>
+            <a href="#cooldown"
+              ><span class="toc-num">02</span>Remove Cooldown</a
+            >
+          </li>
+          <li>
+            <a href="#progress"
+              ><span class="toc-num">03</span>Heist Progress</a
+            >
+          </li>
+          <li>
+            <a href="#finale"><span class="toc-num">04</span>Skip to Finale</a>
+          </li>
+          <li>
+            <a href="#reference"
+              ><span class="toc-num">05</span>Quick Reference</a
+            >
+          </li>
+          <li>
+            <a href="#safety"><span class="toc-num">06</span>Safety Notes</a>
+          </li>
+          <li>
+            <a href="#source"
+              ><span class="toc-num">07</span>Source &amp; Credit</a
+            >
+          </li>
+        </ul>
+      </aside>
+
+      <!-- ARTICLE -->
+      <main class="article">
+        <div class="alert">
+          <strong>READ FIRST —</strong> The Clukin' Bell Heist stats use the
+          <strong>SALV23</strong> prefix. All editing should be done in an
+          <strong>invite-only session</strong>, outside of any active mission,
+          before launching the heist.
+        </div>
+
+        <!-- PREREQ -->
+        <section class="block" id="prereq">
+          <div class="section-head">
+            <span class="section-num">00</span>
+            <h2>Prerequisites</h2>
+            <span class="kicker">Before you begin</span>
+          </div>
+          <ul class="bullets">
+            <li>
+              <strong>GTAHaX</strong> (external) or another Stat Editor
+              compatible with <strong>GTA Online 1.70</strong>.
+            </li>
+            <li>
+              The Clukin' Bell Heist must be
+              <strong>unlocked &amp; set up</strong> — you've paid the initial
+              setup cost at the planning board.
+            </li>
+            <li>
+              Join an <strong>invite-only session</strong> before writing any
+              stats.
+            </li>
+            <li>
+              Write stats <strong>outside an active mission</strong>, then
+              launch the heist from the board.
+            </li>
+          </ul>
+        </section>
+
+        <!-- CHARACTER SLOT -->
+        <section class="block" id="slot">
+          <div class="section-head">
+            <span class="section-num">01</span>
+            <h2>Character Slot</h2>
+            <span class="kicker">MP prefix</span>
+          </div>
+          <p>
+            External editors such as GTAHaX accept the stat names directly as
+            published below (<code
+              style="
+                font-family: var(--font-mono);
+                color: var(--accent);
+                background: rgba(252, 175, 23, 0.08);
+                padding: 2px 8px;
+              "
+              >SALV23_…</code
+            >). If your editor requires the full global stat name, prepend your
+            character slot:
+            <code
+              style="
+                font-family: var(--font-mono);
+                color: var(--accent);
+                background: rgba(252, 175, 23, 0.08);
+                padding: 2px 8px;
+              "
+              >$MP0_</code
+            >
+            for your first character and
+            <code
+              style="
+                font-family: var(--font-mono);
+                color: var(--accent);
+                background: rgba(252, 175, 23, 0.08);
+                padding: 2px 8px;
+              "
+              >$MP1_</code
+            >
+            for your second. All examples in this guide use the bare
+            <strong>SALV23_</strong> names as published in the source thread.
+          </p>
+        </section>
+
+        <!-- COOLDOWN -->
+        <section class="block" id="cooldown">
+          <div class="section-head">
+            <span class="section-num">02</span>
+            <h2>Remove Heist Cooldown</h2>
+            <span class="kicker">SALV23_CFR_COOLDOWN</span>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-head">
+              <span class="stat-name">SALV23_CFR_COOLDOWN</span>
+              <h3>Heist Cooldown</h3>
+              <button class="copy-btn" data-copy="SALV23_CFR_COOLDOWN">
+                Copy
+              </button>
+            </div>
+            <div class="single-value">
+              <span class="lbl">Value</span>
+              <span class="num">-1</span>
+            </div>
+            <p style="margin-top: 16px; margin-bottom: 0">
+              Setting this stat to <strong>-1</strong> clears the cooldown, so
+              the Clukin' Bell Heist can be replayed immediately after a finale
+              instead of waiting for the timer to expire.
+            </p>
+          </div>
+        </section>
+
+        <!-- PROGRESS -->
+        <section class="block" id="progress">
+          <div class="section-head">
+            <span class="section-num">03</span>
+            <h2>Heist Progress</h2>
+            <span class="kicker">SALV23_INST_PROG</span>
+          </div>
+          <p class="lead">
+            The stat <strong>SALV23_INST_PROG</strong> controls the progress of
+            the Clukin' Bell Heist. Each setup you complete sets another bit, so
+            the values stack in order — jump to whichever stage you want.
+          </p>
+          <div class="stat-card">
+            <div class="stat-card-head">
+              <span class="stat-name">SALV23_INST_PROG</span>
+              <h3>Instance Progress</h3>
+              <button class="copy-btn" data-copy="SALV23_INST_PROG">
+                Copy
+              </button>
+            </div>
+            <ul class="value-list">
+              <li>
+                <span class="val">0</span
+                ><span class="desc">Slush Fund [or RESET]</span>
+              </li>
+              <li>
+                <span class="val">1</span
+                ><span class="desc">Setup: Breaking and Entering</span>
+              </li>
+              <li>
+                <span class="val">3</span
+                ><span class="desc">Setup: Concealed Weapons</span>
+              </li>
+              <li>
+                <span class="val">7</span
+                ><span class="desc">Setup: Hit and Run</span>
+              </li>
+              <li>
+                <span class="val">15</span
+                ><span class="desc">Setup: Disorganized Crime</span>
+              </li>
+              <li>
+                <span class="val">31</span
+                ><span class="desc">Finale: Scene of the Crime</span>
+              </li>
+            </ul>
+            <p style="margin-top: 16px; margin-bottom: 0">
+              Type the stat name in the Name field, enter the value, and click
+              <strong>Write</strong>. Value <strong>0</strong> resets the heist
+              back to the Slush Fund state.
+            </p>
+          </div>
+        </section>
+
+        <!-- SKIP TO FINALE -->
+        <section class="block" id="finale">
+          <div class="section-head">
+            <span class="section-num">04</span>
+            <h2>Skip to the Finale</h2>
+            <span class="kicker">Scene of the Crime</span>
+          </div>
+          <p>
+            To skip every setup mission and go straight to the finale, set
+            <strong>SALV23_INST_PROG</strong> to <strong>31</strong>. This marks
+            all four setups as complete and unlocks the
+            <em>Scene of the Crime</em> finale on the planning board.
+          </p>
+          <div class="stat-card">
+            <div class="stat-card-head">
+              <span class="stat-name">SALV23_INST_PROG</span>
+              <h3>Finale Ready</h3>
+              <button class="copy-btn" data-copy="SALV23_INST_PROG">
+                Copy
+              </button>
+            </div>
+            <div class="single-value">
+              <span class="lbl">Value</span>
+              <span class="num">31</span>
+            </div>
+            <p style="margin-top: 16px; margin-bottom: 0">
+              After writing, return to the planning board and launch the finale
+              directly — no prep missions required.
+            </p>
+          </div>
+        </section>
+
+        <!-- QUICK REFERENCE -->
+        <section class="block" id="reference">
+          <div class="section-head">
+            <span class="section-num">05</span>
+            <h2>Quick Reference</h2>
+            <span class="kicker">Copy-paste combos</span>
+          </div>
+          <div class="quickref">
+            <div class="qr-card">
+              <h3>No Cooldown + Reset</h3>
+              <div class="qr-sub">Replay instantly from scratch</div>
+              <div class="table-wrap" style="margin-bottom: 0; border: none">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Stat</th>
+                      <th>Value</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>SALV23_CFR_COOLDOWN</code></td>
+                      <td><span class="num">-1</span></td>
+                    </tr>
+                    <tr>
+                      <td><code>SALV23_INST_PROG</code></td>
+                      <td><span class="num">0</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="qr-card">
+              <h3>Skip to Finale</h3>
+              <div class="qr-sub">All setups complete</div>
+              <div class="table-wrap" style="margin-bottom: 0; border: none">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Stat</th>
+                      <th>Value</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>SALV23_CFR_COOLDOWN</code></td>
+                      <td><span class="num">-1</span></td>
+                    </tr>
+                    <tr>
+                      <td><code>SALV23_INST_PROG</code></td>
+                      <td><span class="num">31</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SAFETY -->
+        <section class="block" id="safety">
+          <div class="section-head">
+            <span class="section-num">06</span>
+            <h2>Detection &amp; Safety</h2>
+            <span class="kicker">Use at your own risk</span>
+          </div>
+          <div class="safety">
+            <h3>No cheat method is risk-free</h3>
+            <p>
+              Stat editing is considered as safe as any other cheat method, but
+              no approach is completely risk-free. Playing in
+              <strong>invite-only sessions</strong> with BattlEye disabled
+              reduces risk. As with any stat manipulation, there's always a
+              chance of detection or account action — use at your own
+              discretion.
+            </p>
+          </div>
+        </section>
+
+        <!-- SOURCE -->
+        <section class="block" id="source">
+          <div class="section-head">
+            <span class="section-num">07</span>
+            <h2>Source &amp; Credit</h2>
+            <span class="kicker">Original findings</span>
+          </div>
+          <p>
+            The <strong>SALV23</strong> stat findings were published by
+            <strong>jkNX</strong> on the UnKnoWnCheaTs thread
+            <em>"GTAHaX for 1.70 [External] [Thread 3]"</em> (8th March 2024).
+            This guide consolidates those findings into the Social Club guide
+            format. Additional stat references — including the weapons and
+            vehicles selectable during missions — are being researched in the
+            original thread.
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="foot-inner">
+        <div>© Community Guide · Not affiliated with Rockstar Games</div>
+        <div class="foot-links">
+          <a href="#">Top</a>
+          <a href="#reference">Quick Ref</a>
+          <a href="#safety">Safety</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../assets/js/guide.js"></script>
+  </body>
+</html>
