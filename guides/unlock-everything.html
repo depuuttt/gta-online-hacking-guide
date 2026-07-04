@@ -1,0 +1,1272 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unlock Everything — MP Stat Reference Guide — Social Club</title>
+    <meta
+      name="description"
+      content="A consolidated MP stat reference for unlocking vehicles, heists, awards, skills, weapon tints, arena war, nightclub, and bulk weapon stats in GTA Online via the Stat Editor."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/guide.css" />
+  </head>
+  <body>
+    <!-- TOP BAR -->
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="logo" href="../index.html">
+          <div class="logo-mark">R</div>
+          <div class="logo-text">ROCKSTAR<span>*</span></div>
+        </a>
+        <nav>
+          <a href="#prereq">Prereq</a>
+          <a href="#vehicles">Vehicles</a>
+          <a href="#heists">Heists</a>
+          <a href="#skills">Skills</a>
+          <a href="#weapons">Weapons</a>
+          <a href="#reference">Quick Ref</a>
+        </nav>
+        <div class="user-chip">
+          <div class="user-avatar">H</div>
+          <div class="user-meta">
+            <div class="name">Heist_Operator</div>
+            <div class="rank">Crew Leader</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-grid"></div>
+      <div class="hero-inner">
+        <div class="crumb fade" style="animation-delay: 0s">
+          <a href="../index.html">Social Club</a><span class="sep">/</span>
+          <a href="../index.html">Guides</a><span class="sep">/</span>
+          <a href="../index.html">Stat Editing</a><span class="sep">/</span>
+          <span>Unlock Everything</span>
+        </div>
+        <div class="hero-tag fade" style="animation-delay: 0.05s">
+          Community Reference
+        </div>
+        <h1 class="fade" style="animation-delay: 0.1s">
+          Unlock <span class="accent">Everything</span><br /><span
+            class="stroke"
+            >MP Stat Reference</span
+          >
+        </h1>
+        <p class="hero-sub fade" style="animation-delay: 0.2s">
+          A consolidated dump of MP stats for unlocking vehicles, heist
+          missions, awards, skills, weapon tints, arena war, nightclub, and
+          bulk weapon kill/shots/held-time stats. Built for the Stat Editor in
+          YimMenu, GTAHaX, and similar tools.
+        </p>
+        <div class="hero-meta fade" style="animation-delay: 0.3s">
+          <div class="item">
+            <span class="label">Category</span
+            ><span class="value">Stat Editing · Unlocks</span>
+          </div>
+          <div class="item">
+            <span class="label">Tool</span
+            ><span class="value">Stat Editor / GTAHaX</span>
+          </div>
+          <div class="item">
+            <span class="label">Scope</span
+            ><span class="value">99% Unlocks</span>
+          </div>
+          <div class="item">
+            <span class="label">Difficulty</span
+            ><span class="value accent">Advanced</span>
+          </div>
+          <div class="item">
+            <span class="label">Updated</span><span class="value">v1.0</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN -->
+    <div class="shell">
+      <!-- TOC -->
+      <aside class="toc">
+        <div class="toc-label">Contents</div>
+        <ul>
+          <li>
+            <a href="#prereq"><span class="toc-num">00</span>Prerequisites</a>
+          </li>
+          <li>
+            <a href="#slot"><span class="toc-num">01</span>Character Slot</a>
+          </li>
+          <li>
+            <a href="#vehicles"
+              ><span class="toc-num">02</span>Vehicles &amp; Tints</a
+            >
+          </li>
+          <li>
+            <a href="#heists"><span class="toc-num">03</span>Heists</a>
+          </li>
+          <li>
+            <a href="#lamar"><span class="toc-num">04</span>Lamar Lowrider</a>
+          </li>
+          <li>
+            <a href="#resupply"><span class="toc-num">05</span>Resupply</a>
+          </li>
+          <li>
+            <a href="#level"><span class="toc-num">06</span>Level / Gender</a>
+          </li>
+          <li>
+            <a href="#supplies"><span class="toc-num">07</span>Snacks &amp; Armour</a>
+          </li>
+          <li>
+            <a href="#business"
+              ><span class="toc-num">08</span>Bunker / Hangar / I-E</a
+            >
+          </li>
+          <li>
+            <a href="#minigames"><span class="toc-num">09</span>Minigames</a>
+          </li>
+          <li>
+            <a href="#club"><span class="toc-num">10</span>Nightclub</a>
+          </li>
+          <li>
+            <a href="#skills"><span class="toc-num">11</span>Skills</a>
+          </li>
+          <li>
+            <a href="#tints"><span class="toc-num">12</span>Weapon Tints</a>
+          </li>
+          <li>
+            <a href="#arena"><span class="toc-num">13</span>Arena War</a>
+          </li>
+          <li>
+            <a href="#rims"><span class="toc-num">14</span>Chrome Rims</a>
+          </li>
+          <li>
+            <a href="#awards"><span class="toc-num">15</span>Awards &amp; Bools</a>
+          </li>
+          <li>
+            <a href="#weapons"><span class="toc-num">16</span>Weapon Stats</a>
+          </li>
+          <li>
+            <a href="#jobs"><span class="toc-num">17</span>Job Unlocks</a>
+          </li>
+          <li>
+            <a href="#safety"><span class="toc-num">18</span>Safety Notes</a>
+          </li>
+          <li>
+            <a href="#source"><span class="toc-num">19</span>Source &amp; Credit</a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- ARTICLE -->
+      <main class="article">
+        <div class="alert">
+          <strong>READ FIRST —</strong> Every
+          <strong>$MPx_</strong> stat must be replaced with
+          <strong>$MP0_</strong> (first character) or
+          <strong>$MP1_</strong> (second character). <strong>INT</strong> stats
+          require a value (suggested values are listed). Write stats in an
+          <strong>invite-only session</strong>, outside any active mission.
+        </div>
+
+        <!-- PREREQ -->
+        <section class="block" id="prereq">
+          <div class="section-head">
+            <span class="section-num">00</span>
+            <h2>Prerequisites</h2>
+            <span class="kicker">Before you begin</span>
+          </div>
+          <ul class="bullets">
+            <li>
+              A <strong>Stat Editor</strong> — YimMenu's built-in Stat Editor,
+              GTAHaXUI, or any external tool that can write MP stats.
+            </li>
+            <li>
+              Join an <strong>invite-only session</strong> before writing any
+              stats. Do not edit while inside an active job or heist.
+            </li>
+            <li>
+              Know your <strong>character slot</strong> — first character uses
+              <strong>$MP0_</strong>, second uses
+              <strong>$MP1_</strong>.
+            </li>
+            <li>
+              Some stats are <strong>BOOL</strong> (set to
+              <strong>1</strong> / true). Others are <strong>INT</strong> and
+              need a numeric value — suggested values are given.
+            </li>
+          </ul>
+        </section>
+
+        <!-- CHARACTER SLOT -->
+        <section class="block" id="slot">
+          <div class="section-head">
+            <span class="section-num">01</span>
+            <h2>Character Slot</h2>
+            <span class="kicker">$MPx_ → $MP0_ / $MP1_</span>
+          </div>
+          <p>
+            All per-character stats are published as
+            <strong>$MPx_…</strong>. Replace <strong>x</strong> with
+            <strong>0</strong> for your first character or
+            <strong>1</strong> for your second. All examples in this guide use
+            <strong>$MP0_</strong>. <strong>$MPPLY_</strong> stats are
+            global (player-wide) and are not slot-prefixed.
+          </p>
+        </section>
+
+        <!-- VEHICLES -->
+        <section class="block" id="vehicles">
+          <div class="section-head">
+            <span class="section-num">02</span>
+            <h2>Vehicles &amp; Tints</h2>
+            <span class="kicker">Shotaro, Up-N-Atomizer</span>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-head">
+              <span class="stat-name">$MP0_CRDEADLINE</span>
+              <h3>Unlock Shotaro</h3>
+              <button class="copy-btn" data-copy="$MP0_CRDEADLINE">
+                Copy
+              </button>
+            </div>
+            <div class="single-value">
+              <span class="lbl">Value</span>
+              <span class="num">5</span>
+            </div>
+            <p style="margin-top: 16px; margin-bottom: 0">
+              Writing <strong>5</strong> unlocks the Nagasaki Shotaro for
+              purchase at Legendary Motorsport.
+            </p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-head">
+              <span class="stat-name">101554</span>
+              <h3>Up-N-Atomizer Festive Tint</h3>
+              <button class="copy-btn" data-copy="101554">
+                Copy
+              </button>
+            </div>
+            <div class="single-value">
+              <span class="lbl">Value</span>
+              <span class="num">90</span>
+            </div>
+            <p style="margin-top: 16px; margin-bottom: 0">
+              Set stat <strong>101554</strong> to <strong>90</strong> to unlock
+              the festive tint for the Up-N-Atomizer.
+            </p>
+          </div>
+        </section>
+
+        <!-- HEISTS -->
+        <section class="block" id="heists">
+          <div class="section-head">
+            <span class="section-num">03</span>
+            <h2>Heists</h2>
+            <span class="kicker">Doomsday &amp; Apartments</span>
+          </div>
+          <p class="lead">
+            Unlock the Doomsday Heist mission set and the classic Heist
+            apartment awards.
+          </p>
+
+          <div class="stat-card">
+            <div class="stat-card-head">
+              <span class="stat-name">$MP0_GANGOPS_HEIST_STATUS</span>
+              <h3>Doomsday Heist Missions</h3>
+              <button class="copy-btn" data-copy="$MP0_GANGOPS_HEIST_STATUS">
+                Copy
+              </button>
+            </div>
+            <div class="single-value">
+              <span class="lbl">Value</span>
+              <span class="num">9999</span>
+            </div>
+            <p style="margin-top: 16px">
+              Set to <strong>9999</strong> (do <em>not</em> use
+              <strong>-1</strong> — the heist will read as unavailable). After
+              writing the stat, call Lester and
+              <strong>cancel the Doomsday Heist three times</strong>. You will
+              then have access to all Doomsday missions.
+            </p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-card-head">
+              <span class="stat-name">Heist Apartment Awards</span>
+              <h3>Classic Heist Completion Bools</h3>
+            </div>
+            <p style="margin-top: 0; margin-bottom: 12px">
+              Set each of these <strong>$MPPLY_</strong> BOOL stats to
+              <strong>1</strong> (true):
+            </p>
+            <div class="table-wrap" style="margin-bottom: 0; border: none">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Stat</th>
+                    <th>Type</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><code>$MPPLY_AWD_COMPLET_HEIST_1STPER</code></td><td><span class="num">BOOL</span></td></tr>
+                  <tr><td><code>$MPPLY_AWD_COMPLET_HEIST_MEM</code></td><td><span class="num">BOOL</span></td></tr>
+                  <tr><td><code>$MPPLY_AWD_FLEECA_FIN</code></td><td><span class="num">BOOL</span></td></tr>
+                  <tr><td><code>$MPPLY_AWD_PRISON_FIN</code></td><td><span class="num">BOOL</span></td></tr>
+                  <tr><td><code>$MPPLY_AWD_HUMANE_FIN</code></td><td><span class="num">BOOL</span></td></tr>
+                  <tr><td><code>$MPPLY_AWD_SERIESA_FIN</code></td><td><span class="num">BOOL</span></td></tr>
+                  <tr><td><code>$MPPLY_AWD_PACIFIC_FIN</code></td><td><span class="num">BOOL</span></td></tr>
+                  <tr><td><code>$MPPLY_AWD_HST_ORDER</code></td><td><span class="num">BOOL</span></td></tr>
+                  <tr><td><code>$MPPLY_AWD_HST_SAME_TEAM</code></td><td><span class="num">BOOL</span></td></tr>
+                  <tr><td><code>$MPPLY_AWD_HST_ULT_CHAL</code></td><td><span class="num">BOOL</span></td></tr>
+                  <tr><td><code>$MPPLY_HEIST_ACH_TRACKER</code></td><td><span class="num">-1</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- LAMAR -->
+        <section class="block" id="lamar">
+          <div class="section-head">
+            <span class="section-num">04</span>
+            <h2>Lamar Lowrider Skip</h2>
+            <span class="kicker">Jump to last mission</span>
+          </div>
+          <p class="lead">
+            Skip the Lamar lowrider mission strand straight to the final
+            mission (L8) to unlock the Benny's shirts, then forget the strand
+            forever.
+          </p>
+          <div class="step">
+            <div class="step-num">1</div>
+            <div>
+              <h3>Skip every cutscene</h3>
+              <p>Set these BOOL stats to <strong>1</strong> (true):</p>
+              <div class="table-wrap" style="margin-bottom: 0; border: none">
+                <table>
+                  <tbody>
+                    <tr><td><code>$MP0_LOW_FLOW_CS_DRV_SEEN</code></td></tr>
+                    <tr><td><code>$MP0_LOW_FLOW_CS_TRA_SEEN</code></td></tr>
+                    <tr><td><code>$MP0_LOW_FLOW_CS_FUN_SEEN</code></td></tr>
+                    <tr><td><code>$MP0_LOW_FLOW_CS_PHO_SEEN</code></td></tr>
+                    <tr><td><code>$MP0_LOW_FLOW_CS_FIN_SEEN</code></td></tr>
+                    <tr><td><code>$MP0_LOW_BEN_INTRO_CS_SEEN</code></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div>
+              <h3>Mark the strand complete</h3>
+              <div class="table-wrap" style="margin-bottom: 0; border: none">
+                <table>
+                  <thead>
+                    <tr><th>Stat</th><th>Value</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td><code>$MP0_LOWRIDER_FLOW_COMPLETE</code></td><td><span class="num">2 or 3</span></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div>
+              <h3>Advance to the last mission</h3>
+              <div class="table-wrap" style="margin-bottom: 10px; border: none">
+                <table>
+                  <thead>
+                    <tr><th>Stat</th><th>Value</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td><code>$MP0_LOW_FLOW_CURRENT_PROG</code></td><td><span class="num">8</span></td></tr>
+                    <tr><td><code>$MP0_LOW_FLOW_CURRENT_CALL</code></td><td><span class="num">8</span></td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p style="margin-bottom: 0">
+                Find a <strong>new session</strong> — you'll see
+                <strong>L8</strong> on the map. Complete the last mission and
+                the Benny's shirts unlock.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- RESUPPLY -->
+        <section class="block" id="resupply">
+          <div class="section-head">
+            <span class="section-num">05</span>
+            <h2>Resupply Timers</h2>
+            <span class="kicker">Bunker / businesses</span>
+          </div>
+          <p>
+            Zero out the resupply cooldown timers. Try writing
+            <strong>1</strong> to each and wait — the game will refresh the
+            supply state.
+          </p>
+          <div class="stat-card">
+            <div class="stat-card-head">
+              <span class="stat-name">$MP0_PAYRESUPPLYTIMER0–5</span>
+              <h3>Resupply Cooldowns</h3>
+            </div>
+            <div class="table-wrap" style="margin-bottom: 0; border: none">
+              <table>
+                <thead>
+                  <tr><th>Stat</th><th>Try</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><code>$MP0_PAYRESUPPLYTIMER0</code></td><td><span class="num">1</span></td></tr>
+                  <tr><td><code>$MP0_PAYRESUPPLYTIMER1</code></td><td><span class="num">1</span></td></tr>
+                  <tr><td><code>$MP0_PAYRESUPPLYTIMER2</code></td><td><span class="num">1</span></td></tr>
+                  <tr><td><code>$MP0_PAYRESUPPLYTIMER3</code></td><td><span class="num">1</span></td></tr>
+                  <tr><td><code>$MP0_PAYRESUPPLYTIMER4</code></td><td><span class="num">1</span></td></tr>
+                  <tr><td><code>$MP0_PAYRESUPPLYTIMER5</code></td><td><span class="num">1</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- LEVEL / GENDER -->
+        <section class="block" id="level">
+          <div class="section-head">
+            <span class="section-num">06</span>
+            <h2>Level, Kills &amp; Gender</h2>
+            <span class="kicker">RP / K-D / gender change</span>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-head">
+              <span class="stat-name">Player &amp; Char Stats</span>
+              <h3>Kills / Deaths / Gender</h3>
+            </div>
+            <div class="table-wrap" style="margin-bottom: 0; border: none">
+              <table>
+                <thead>
+                  <tr><th>Stat</th><th>Note</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><code>$MPPLY_KILLS_PLAYERS</code></td><td>Player kills (global)</td></tr>
+                  <tr><td><code>$MP0_KILLS</code></td><td>Character kills</td></tr>
+                  <tr><td><code>$MP0_KILLS_PLAYERS</code></td><td>Character player kills</td></tr>
+                  <tr><td><code>$MPPLY_DEATHS_PLAYER</code></td><td>Player deaths (global)</td></tr>
+                  <tr><td><code>$MP0_DEATHS</code></td><td>Character deaths</td></tr>
+                  <tr><td><code>$MP0_DEATHS_PLAYER</code></td><td>Character player deaths</td></tr>
+                  <tr><td><code>$MP0_ALLOW_GENDER_CHANGE</code></td><td><span class="num">52</span> — allow gender swap</td></tr>
+                  <tr><td><code>$MP0_CHAR_SET_RP_GIFT_ADMIN</code></td><td>Admin RP gift (set your target RP)</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- SNACKS & ARMOUR -->
+        <section class="block" id="supplies">
+          <div class="section-head">
+            <span class="section-num">07</span>
+            <h2>Max Snacks &amp; Armour</h2>
+            <span class="kicker">Inventory caps</span>
+          </div>
+          <div class="stat-card">
+            <div class="table-wrap" style="margin-bottom: 0; border: none">
+              <table>
+                <thead>
+                  <tr><th>Stat</th><th>Value</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><code>$MP0_NO_BOUGHT_YUM_SNACKS</code></td><td><span class="num">30</span></td></tr>
+                  <tr><td><code>$MP0_NO_BOUGHT_HEALTH_SNACKS</code></td><td><span class="num">15</span></td></tr>
+                  <tr><td><code>$MP0_NO_BOUGHT_EPIC_SNACKS</code></td><td><span class="num">5</span></td></tr>
+                  <tr><td><code>$MP0_NUMBER_OF_ORANGE_BOUGHT</code></td><td><span class="num">10</span></td></tr>
+                  <tr><td><code>$MP0_NUMBER_OF_BOURGE_BOUGHT</code></td><td><span class="num">10</span></td></tr>
+                  <tr><td><code>$MP0_CIGARETTES_BOUGHT</code></td><td><span class="num">20</span></td></tr>
+                  <tr><td><code>$MP0_CHAR_ARMOUR_5_COUNT</code></td><td><span class="num">10</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- BUSINESS -->
+        <section class="block" id="business">
+          <div class="section-head">
+            <span class="section-num">08</span>
+            <h2>Bunker / Hangar / Import-Export</h2>
+            <span class="kicker">Lifetime business stats</span>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-head">
+              <span class="stat-name">$MP0_BUNKER_UNITS_MANUFAC</span>
+              <h3>Bunker</h3>
+              <button class="copy-btn" data-copy="$MP0_BUNKER_UNITS_MANUFAC">
+                Copy
+              </button>
+            </div>
+            <p style="margin: 0">Units manufactured — set to your desired value.</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-head">
+              <span class="stat-name">Hangar Stats</span>
+              <h3>Smuggler's Run</h3>
+            </div>
+            <div class="table-wrap" style="margin-bottom: 0; border: none">
+              <table>
+                <tbody>
+                  <tr><td><code>$MP0_LFETIME_HANGAR_BUY_UNDETAK</code></td></tr>
+                  <tr><td><code>$MP0_LFETIME_HANGAR_BUY_COMPLET</code></td></tr>
+                  <tr><td><code>$MP0_LFETIME_HANGAR_SEL_UNDETAK</code></td></tr>
+                  <tr><td><code>$MP0_LFETIME_HANGAR_SEL_COMPLET</code></td></tr>
+                  <tr><td><code>$MP0_LFETIME_HANGAR_EARNINGS</code></td></tr>
+                  <tr><td><code>$MP0_LFETIME_HANGAR_EARN_BONUS</code></td></tr>
+                  <tr><td><code>$MP0_RIVAL_HANGAR_CRATES_STOLEN</code></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-head">
+              <span class="stat-name">Import / Export Stats</span>
+              <h3>Vehicle Cargo</h3>
+            </div>
+            <div class="table-wrap" style="margin-bottom: 0; border: none">
+              <table>
+                <thead>
+                  <tr><th>Stat</th><th>Value</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><code>$MP0_LFETIME_IE_STEAL_STARTED</code></td><td>—</td></tr>
+                  <tr><td><code>$MP0_LFETIME_IE_EXPORT_STARTED</code></td><td>—</td></tr>
+                  <tr><td><code>$MP0_LFETIME_IE_EXPORT_COMPLETED</code></td><td>—</td></tr>
+                  <tr><td><code>$MP0_LFETIME_IE_MISSION_EARNINGS</code></td><td>—</td></tr>
+                  <tr><td><code>$MP0_AT_FLOW_IMPEXP_NUM</code></td><td><span class="num">32</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- MINIGAMES -->
+        <section class="block" id="minigames">
+          <div class="section-head">
+            <span class="section-num">09</span>
+            <h2>Minigames Wins / Losses</h2>
+            <span class="kicker">Races, DM, golf, tennis, BJ</span>
+          </div>
+          <div class="stat-card">
+            <div class="table-wrap" style="margin-bottom: 0; border: none">
+              <table>
+                <thead>
+                  <tr><th>Stat</th><th>Value</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><code>$MPPLY_TOTAL_RACES_WON</code></td><td><span class="num">500</span></td></tr>
+                  <tr><td><code>$MPPLY_TOTAL_RACES_LOST</code></td><td><span class="num">100</span></td></tr>
+                  <tr><td><code>$MPPLY_TOTAL_TIME_SPENT_RACES</code></td><td><span class="num">2147483647</span></td></tr>
+                  <tr><td><code>$MPPLY_TOTAL_TIME_SPENT_DEATHMAT</code></td><td><span class="num">2147483647</span></td></tr>
+                  <tr><td><code>$MPPLY_TOTAL_DEATHMATCH_LOST</code></td><td><span class="num">100</span></td></tr>
+                  <tr><td><code>$MPPLY_TOTAL_DEATHMATCH_WON</code></td><td><span class="num">500</span></td></tr>
+                  <tr><td><code>$MPPLY_TENNIS_MATCHES_WON</code></td><td><span class="num">500</span></td></tr>
+                  <tr><td><code>$MPPLY_TENNIS_MATCHES_LOST</code></td><td><span class="num">100</span></td></tr>
+                  <tr><td><code>$MPPLY_BJ_WINS</code></td><td><span class="num">500</span></td></tr>
+                  <tr><td><code>$MPPLY_BJ_LOST</code></td><td><span class="num">200</span></td></tr>
+                  <tr><td><code>$MP0_AWD_FM_GOLF_HOLE_IN_1</code></td><td><span class="num">BOOL</span></td></tr>
+                  <tr><td><code>$MPPLY_GOLF_WINS</code></td><td><span class="num">500</span></td></tr>
+                  <tr><td><code>$MPPLY_GOLF_LOSSES</code></td><td><span class="num">200</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- CLUB -->
+        <section class="block" id="club">
+          <div class="section-head">
+            <span class="section-num">10</span>
+            <h2>Nightclub</h2>
+            <span class="kicker">Popularity &amp; hub earnings</span>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-head">
+              <span class="stat-name">$MPX_CLUB_POPULARITY</span>
+              <h3>Popularity</h3>
+              <button class="copy-btn" data-copy="$MP0_CLUB_POPULARITY">
+                Copy
+              </button>
+            </div>
+            <div class="single-value">
+              <span class="lbl">Value</span>
+              <span class="num">1000</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-head">
+              <span class="stat-name">Nightclub Stats</span>
+              <h3>Earnings &amp; Hub</h3>
+            </div>
+            <div class="table-wrap" style="margin-bottom: 0; border: none">
+              <table>
+                <tbody>
+                  <tr><td><code>$MP0_NIGHTCLUB_VIP_APPEAR</code></td></tr>
+                  <tr><td><code>$MP0_NIGHTCLUB_JOBS_DONE</code></td></tr>
+                  <tr><td><code>$MP0_NIGHTCLUB_EARNINGS</code></td></tr>
+                  <tr><td><code>$MP0_HUB_SALES_COMPLETED</code></td></tr>
+                  <tr><td><code>$MP0_HUB_EARNINGS</code></td></tr>
+                  <tr><td><code>$MP0_DANCE_COMBO_DURATION_MINS</code></td></tr>
+                  <tr><td><code>$MP0_NIGHTCLUB_PLAYER_APPEAR</code></td></tr>
+                  <tr><td><code>$MP0_LIFETIME_HUB_GOODS_SOLD</code></td></tr>
+                  <tr><td><code>$MP0_LIFETIME_HUB_GOODS_MADE</code></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-head">
+              <span class="stat-name">Club Awards</span>
+              <h3>DJ Dance &amp; Club Bools</h3>
+            </div>
+            <p style="margin-top: 0; margin-bottom: 12px">
+              Set these BOOL stats to <strong>1</strong>:
+            </p>
+            <div class="table-wrap" style="margin-bottom: 0; border: none">
+              <table>
+                <tbody>
+                  <tr><td><code>$MP0_AWD_DANCE_TO_SOLOMUN</code></td></tr>
+                  <tr><td><code>$MP0_AWD_DANCE_TO_TALEOFUS</code></td></tr>
+                  <tr><td><code>$MP0_AWD_DANCE_TO_DIXON</code></td></tr>
+                  <tr><td><code>$MP0_AWD_DANCE_TO_BLKMAD</code></td></tr>
+                  <tr><td><code>$MP0_AWD_CLUB_DRUNK</code></td></tr>
+                  <tr><td><code>$MP0_AWD_CLUB_COORD</code></td></tr>
+                  <tr><td><code>$MP0_AWD_CLUB_HOTSPOT</code></td></tr>
+                  <tr><td><code>$MP0_AWD_CLUB_CLUBBER</code></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="block" id="skills">
+          <div class="section-head">
+            <span class="section-num">11</span>
+            <h2>Skills</h2>
+            <span class="kicker">Max all stats</span>
+          </div>
+          <div class="stat-card">
+            <div class="table-wrap" style="margin-bottom: 0; border: none">
+              <table>
+                <thead>
+                  <tr><th>Stat</th><th>Value</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><code>$MP0_SCRIPT_INCREASE_STAM</code></td><td><span class="num">100</span></td></tr>
+                  <tr><td><code>$MP0_SCRIPT_INCREASE_STRN</code></td><td><span class="num">100</span></td></tr>
+                  <tr><td><code>$MP0_SCRIPT_INCREASE_LUNG</code></td><td><span class="num">100</span></td></tr>
+                  <tr><td><code>$MP0_SCRIPT_INCREASE_DRIV</code></td><td><span class="num">100</span></td></tr>
+                  <tr><td><code>$MP0_SCRIPT_INCREASE_FLY</code></td><td><span class="num">100</span></td></tr>
+                  <tr><td><code>$MP0_SCRIPT_INCREASE_SHO</code></td><td><span class="num">100</span></td></tr>
+                  <tr><td><code>$MP0_SCRIPT_INCREASE_STL</code></td><td><span class="num">100</span></td></tr>
+                  <tr><td><code>$MP0_SCRIPT_INCREASE_MECH</code></td><td><span class="num">100</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- TINTS -->
+        <section class="block" id="tints">
+          <div class="section-head">
+            <span class="section-num">12</span>
+            <h2>Weapon Tints (non-MK2)</h2>
+            <span class="kicker">Enemy kills per weapon</span>
+          </div>
+          <p>
+            For classic (non-MK2) weapon tints, set the
+            <strong>_ENEMY_KILLS</strong> stat for each weapon to
+            <strong>600</strong>.
+          </p>
+          <div class="stat-card">
+            <div class="table-wrap" style="margin-bottom: 0; border: none">
+              <table>
+                <thead>
+                  <tr><th>Stat</th><th>Value</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><code>$MP0_MOLOTOV_ENEMY_KILLS</code></td><td><span class="num">600</span></td></tr>
+                  <tr><td><code>$MP0_CMBTPISTOL_ENEMY_KILLS</code></td><td><span class="num">600</span></td></tr>
+                  <tr><td><code>$MP0_PISTOL50_ENEMY_KILLS</code></td><td><span class="num">600</span></td></tr>
+                  <tr><td><code>$MP0_APPISTOL_ENEMY_KILLS</code></td><td><span class="num">600</span></td></tr>
+                  <tr><td><code>$MP0_MICROSMG_ENEMY_KILLS</code></td><td><span class="num">600</span></td></tr>
+                  <tr><td><code>$MP0_SMG_ENEMY_KILLS</code></td><td><span class="num">600</span></td></tr>
+                  <tr><td><code>$MP0_ASLTSMG_ENEMY_KILLS</code></td><td><span class="num">600</span></td></tr>
+                  <tr><td><code>$MP0_ASLTRIFLE_ENEMY_KILLS</code></td><td><span class="num">600</span></td></tr>
+                  <tr><td><code>$MP0_CRBNRIFLE_ENEMY_KILLS</code></td><td><span class="num">600</span></td></tr>
+                  <tr><td><code>$MP0_ADVRIFLE_ENEMY_KILLS</code></td><td><span class="num">600</span></td></tr>
+                  <tr><td><code>$MP0_MG_ENEMY_KILLS</code></td><td><span class="num">600</span></td></tr>
+                  <tr><td><code>$MP0_CMBTMG_ENEMY_KILLS</code></td><td><span class="num">600</span></td></tr>
+                  <tr><td><code>$MP0_ASLTMG_ENEMY_KILLS</code></td><td><span class="num">600</span></td></tr>
+                  <tr><td><code>$MP0_PUMP_ENEMY_KILLS</code></td><td><span class="num">600</span></td></tr>
+                  <tr><td><code>$MP0_SAWNOFF_ENEMY_KILLS</code></td><td><span class="num">600</span></td></tr>
+                  <tr><td><code>$MP0_BULLPUP_ENEMY_KILLS</code></td><td><span class="num">600</span></td></tr>
+                  <tr><td><code>$MP0_ASLTSHTGN_ENEMY_KILLS</code></td><td><span class="num">600</span></td></tr>
+                  <tr><td><code>$MP0_SNIPERRFL_ENEMY_KILLS</code></td><td><span class="num">600</span></td></tr>
+                  <tr><td><code>$MP0_HVYSNIPER_ENEMY_KILLS</code></td><td><span class="num">600</span></td></tr>
+                  <tr><td><code>$MP0_GRNLAUNCH_ENEMY_KILLS</code></td><td><span class="num">600</span></td></tr>
+                  <tr><td><code>$MP0_RPG_ENEMY_KILLS</code></td><td><span class="num">600</span></td></tr>
+                  <tr><td><code>$MP0_MINIGUNS_ENEMY_KILLS</code></td><td><span class="num">600</span></td></tr>
+                  <tr><td><code>$MP0_GRENADE_ENEMY_KILLS</code></td><td><span class="num">600</span></td></tr>
+                  <tr><td><code>$MP0_SMKGRENADE_ENEMY_KILLS</code></td><td><span class="num">600</span></td></tr>
+                  <tr><td><code>$MP0_STKYBMB_ENEMY_KILLS</code></td><td><span class="num">600</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ARENA -->
+        <section class="block" id="arena">
+          <div class="section-head">
+            <span class="section-num">13</span>
+            <h2>Arena War</h2>
+            <span class="kicker">Tier, skill, AP, awards</span>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-head">
+              <span class="stat-name">Arena Stats</span>
+              <h3>Progression</h3>
+            </div>
+            <div class="table-wrap" style="margin-bottom: 0; border: none">
+              <table>
+                <thead>
+                  <tr><th>Stat</th><th>Value</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><code>$MPX_ARENAWARS_AP_TIER</code></td><td>—</td></tr>
+                  <tr><td><code>$MPX_ARENAWARS_CARRER_UNLK</code></td><td>—</td></tr>
+                  <tr><td><code>$MPX_ARENAWARS_SKILL_LEVEL</code></td><td>—</td></tr>
+                  <tr><td><code>$MPX_ARENAWARS_SP</code></td><td>—</td></tr>
+                  <tr><td><code>$MPX_NUMBER_OF_CHAMP_BOUGHT</code></td><td><span class="num">5</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-head">
+              <span class="stat-name">Arena Awards</span>
+              <h3>Award Bools</h3>
+            </div>
+            <p style="margin-top: 0; margin-bottom: 12px">
+              Set each to <strong>1</strong> (BOOL):
+            </p>
+            <div class="table-wrap" style="margin-bottom: 0; border: none">
+              <table>
+                <tbody>
+                  <tr><td><code>$MP0_AWD_READY_FOR_WAR</code></td></tr>
+                  <tr><td><code>$MP0_AWD_THROUGH_A_LENS</code></td></tr>
+                  <tr><td><code>$MP0_AWD_SPINNER</code></td></tr>
+                  <tr><td><code>$MP0_AWD_YOUMEANBOOBYTRAPS</code></td></tr>
+                  <tr><td><code>$MP0_AWD_MASTER_BANDITO</code></td></tr>
+                  <tr><td><code>$MP0_AWD_SITTING_DUCK</code></td></tr>
+                  <tr><td><code>$MP0_AWD_CROWDPARTICIPATION</code></td></tr>
+                  <tr><td><code>$MP0_AWD_KILL_OR_BE_KILLED</code></td></tr>
+                  <tr><td><code>$MP0_AWD_MASSIVE_SHUNT</code></td></tr>
+                  <tr><td><code>$MP0_AWD_YOURE_OUTTA_HERE</code></td></tr>
+                  <tr><td><code>$MP0_AWD_WEVE_GOT_ONE</code></td></tr>
+                  <tr><td><code>$MP0_AWD_ARENA_WAGEWORKER</code></td></tr>
+                  <tr><td><code>$MP0_AWD_TIME_SERVED</code></td></tr>
+                  <tr><td><code>$MP0_AWD_TOP_SCORE</code></td></tr>
+                  <tr><td><code>$MP0_AWD_CAREER_WINNER</code></td></tr>
+                  <tr><td><code>$MP0_AWD_WATCH_YOUR_STEP</code></td></tr>
+                  <tr><td><code>$MP0_AWD_TOWER_OFFENSE</code></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- RIMS -->
+        <section class="block" id="rims">
+          <div class="section-head">
+            <span class="section-num">14</span>
+            <h2>All Chrome Rims &amp; Race Awards</h2>
+            <span class="kicker">Car mod unlocks</span>
+          </div>
+          <p>
+            Set the seven
+            <strong>$MP0_CHAR_FM_CARMOD_x_UNLCK</strong> stats to
+            <strong>-1</strong> to unlock all car mods (including chrome rims),
+            then satisfy the race award requirements below.
+          </p>
+          <div class="stat-card">
+            <div class="table-wrap" style="margin-bottom: 0; border: none">
+              <table>
+                <thead>
+                  <tr><th>Stat</th><th>Value</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><code>$MP0_CHAR_FM_CARMOD_1_UNLCK</code></td><td><span class="num">-1</span></td></tr>
+                  <tr><td><code>$MP0_CHAR_FM_CARMOD_2_UNLCK</code></td><td><span class="num">-1</span></td></tr>
+                  <tr><td><code>$MP0_CHAR_FM_CARMOD_3_UNLCK</code></td><td><span class="num">-1</span></td></tr>
+                  <tr><td><code>$MP0_CHAR_FM_CARMOD_4_UNLCK</code></td><td><span class="num">-1</span></td></tr>
+                  <tr><td><code>$MP0_CHAR_FM_CARMOD_5_UNLCK</code></td><td><span class="num">-1</span></td></tr>
+                  <tr><td><code>$MP0_CHAR_FM_CARMOD_6_UNLCK</code></td><td><span class="num">-1</span></td></tr>
+                  <tr><td><code>$MP0_CHAR_FM_CARMOD_7_UNLCK</code></td><td><span class="num">-1</span></td></tr>
+                  <tr><td><code>$MP0_AWD_FMRALLYWONDRIVE</code></td><td><span class="num">1</span></td></tr>
+                  <tr><td><code>$MP0_AWD_FMRALLYWONNAV</code></td><td><span class="num">1</span></td></tr>
+                  <tr><td><code>$MP0_AWD_FMWINSEARACE</code></td><td><span class="num">1</span></td></tr>
+                  <tr><td><code>$MP0_AWD_FMWINAIRRACE</code></td><td><span class="num">1</span></td></tr>
+                  <tr><td><code>$MP0_NUMBER_TURBO_STARTS_IN_RACE</code></td><td><span class="num">50</span></td></tr>
+                  <tr><td><code>$MP0_USJS_COMPLETED</code></td><td><span class="num">50</span></td></tr>
+                  <tr><td><code>$MP0_AWD_FM_RACES_FASTEST_LAP</code></td><td><span class="num">50</span></td></tr>
+                  <tr><td><code>$MP0_NUMBER_SLIPSTREAMS_IN_RACE</code></td><td><span class="num">100</span></td></tr>
+                  <tr><td><code>$MP0_AWD_WIN_CAPTURES</code></td><td><span class="num">50</span></td></tr>
+                  <tr><td><code>$MP0_AWD_DROPOFF_CAP_PACKAGES</code></td><td><span class="num">100</span></td></tr>
+                  <tr><td><code>$MP0_AWD_KILL_CARRIER_CAPTURE</code></td><td><span class="num">100</span></td></tr>
+                  <tr><td><code>$MP0_AWD_FINISH_HEISTS</code></td><td><span class="num">50</span></td></tr>
+                  <tr><td><code>$MP0_AWD_FINISH_HEIST_SETUP_JOB</code></td><td><span class="num">50</span></td></tr>
+                  <tr><td><code>$MP0_AWD_NIGHTVISION_KILLS</code></td><td><span class="num">100</span></td></tr>
+                  <tr><td><code>$MP0_AWD_WIN_LAST_TEAM_STANDINGS</code></td><td><span class="num">50</span></td></tr>
+                  <tr><td><code>$MP0_AWD_ONLY_PLAYER_ALIVE_LTS</code></td><td><span class="num">50</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- AWARDS & BOOLS -->
+        <section class="block" id="awards">
+          <div class="section-head">
+            <span class="section-num">15</span>
+            <h2>Awards &amp; Bool Stats</h2>
+            <span class="kicker">Set to 1 (true)</span>
+          </div>
+          <p class="lead">
+            Two groups: numeric awards (set the listed value) and BOOL awards
+            (set to <strong>1</strong>).
+          </p>
+          <div class="stat-card">
+            <div class="stat-card-head">
+              <span class="stat-name">Numeric Awards</span>
+              <h3>Value-based</h3>
+            </div>
+            <div class="table-wrap" style="margin-bottom: 0; border: none">
+              <table>
+                <thead>
+                  <tr><th>Stat</th><th>Value</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><code>$MP0_AWD_MENTALSTATE_TO_NORMAL</code></td><td><span class="num">25</span></td></tr>
+                  <tr><td><code>$MP0_AWD_TRADE_IN_YOUR_PROPERTY</code></td><td><span class="num">25</span></td></tr>
+                  <tr><td><code>$MP0_AWD_CONTROL_CROWDS</code></td><td><span class="num">25</span></td></tr>
+                  <tr><td><code>$MP0_LAP_DANCED_BOUGHT</code></td><td><span class="num">25</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-head">
+              <span class="stat-name">Bool Award Stats</span>
+              <h3>Set each to 1</h3>
+            </div>
+            <p style="margin-top: 0; margin-bottom: 12px">
+              FM activity awards (set to <strong>1</strong>):
+            </p>
+            <div class="table-wrap" style="margin-bottom: 16px; border: none">
+              <table>
+                <tbody>
+                  <tr><td><code>$MP0_AWD_FM_GOLF_HOLE_IN_1</code></td></tr>
+                  <tr><td><code>$MP0_AWD_FM_GOLF_BIRDIES</code></td></tr>
+                  <tr><td><code>$MP0_AWD_FM_GOLF_WON</code></td></tr>
+                  <tr><td><code>$MP0_AWD_FM_SHOOTRANG_TG_WON</code></td></tr>
+                  <tr><td><code>$MP0_AWD_FM_SHOOTRANG_RT_WON</code></td></tr>
+                  <tr><td><code>$MP0_AWD_FM_SHOOTRANG_CT_WON</code></td></tr>
+                  <tr><td><code>$MP0_AWD_FM_SHOOTRANG_GRAN_WON</code></td></tr>
+                  <tr><td><code>$MP0_AWD_FM_TENNIS_WON</code></td></tr>
+                  <tr><td><code>$MP0_AWD_FM_TENNIS_ACE</code></td></tr>
+                  <tr><td><code>$MP0_AWD_FM_TENNIS_5_SET_WINS</code></td></tr>
+                  <tr><td><code>$MP0_AWD_FM_TENNIS_STASETWIN</code></td></tr>
+                  <tr><td><code>$MP0_AWD_FM_GTA_RACES_WON</code></td></tr>
+                  <tr><td><code>$MP0_AWD_FM_RACES_FASTEST_LAP</code></td></tr>
+                  <tr><td><code>$MP0_AWD_FM_RACE_LAST_FIRST</code></td></tr>
+                  <tr><td><code>$MP0_AWD_FM_DM_WINS</code></td></tr>
+                  <tr><td><code>$MP0_AWD_FM_TDM_WINS</code></td></tr>
+                  <tr><td><code>$MP0_AWD_FM_TDM_MVP</code></td></tr>
+                  <tr><td><code>$MP0_AWD_FM_DM_KILLSTREAK</code></td></tr>
+                  <tr><td><code>$MP0_AWD_FM_DM_TOTALKILLS</code></td></tr>
+                  <tr><td><code>$MP0_AWD_FM_DM_3KILLSAMEGUY</code></td></tr>
+                  <tr><td><code>$MP0_AWD_FM_DM_STOLENKILL</code></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p style="margin-top: 0; margin-bottom: 12px">
+              Global &amp; arena bools (set to <strong>1</strong>):
+            </p>
+            <div class="table-wrap" style="margin-bottom: 0; border: none">
+              <table>
+                <tbody>
+                  <tr><td><code>$MPPLY_AWD_FLEECA_FIN</code></td></tr>
+                  <tr><td><code>$MPPLY_AWD_PRISON_FIN</code></td></tr>
+                  <tr><td><code>$MPPLY_AWD_HUMANE_FIN</code></td></tr>
+                  <tr><td><code>$MPPLY_AWD_SERIESA_FIN</code></td></tr>
+                  <tr><td><code>$MPPLY_AWD_PACIFIC_FIN</code></td></tr>
+                  <tr><td><code>$MPPLY_AWD_HST_ORDER</code></td></tr>
+                  <tr><td><code>$MPPLY_AWD_HST_SAME_TEAM</code></td></tr>
+                  <tr><td><code>$MPPLY_AWD_HST_ULT_CHAL</code></td></tr>
+                  <tr><td><code>$MP0_AWD_BEGINNER</code></td></tr>
+                  <tr><td><code>$MP0_AWD_FIELD_FILLER</code></td></tr>
+                  <tr><td><code>$MP0_AWD_ARMCHAIR_RACER</code></td></tr>
+                  <tr><td><code>$MP0_AWD_LEARNER</code></td></tr>
+                  <tr><td><code>$MP0_AWD_SUNDAY_DRIVER</code></td></tr>
+                  <tr><td><code>$MP0_AWD_THE_ROOKIE</code></td></tr>
+                  <tr><td><code>$MP0_AWD_BUMP_AND_RUN</code></td></tr>
+                  <tr><td><code>$MP0_AWD_GEAR_HEAD</code></td></tr>
+                  <tr><td><code>$MP0_AWD_DOOR_SLAMMER</code></td></tr>
+                  <tr><td><code>$MP0_AWD_HOT_LAP</code></td></tr>
+                  <tr><td><code>$MP0_AWD_ARENA_AMATEUR</code></td></tr>
+                  <tr><td><code>$MP0_AWD_PAINT_TRADER</code></td></tr>
+                  <tr><td><code>$MP0_AWD_SHUNTER</code></td></tr>
+                  <tr><td><code>$MP0_AWD_JOCK</code></td></tr>
+                  <tr><td><code>$MP0_AWD_WARRIOR</code></td></tr>
+                  <tr><td><code>$MP0_AWD_T_BONE</code></td></tr>
+                  <tr><td><code>$MP0_AWD_MAYHEM</code></td></tr>
+                  <tr><td><code>$MP0_AWD_WRECKER</code></td></tr>
+                  <tr><td><code>$MP0_AWD_CRASH_COURSE</code></td></tr>
+                  <tr><td><code>$MP0_AWD_ARENA_LEGEND</code></td></tr>
+                  <tr><td><code>$MP0_AWD_PEGASUS</code></td></tr>
+                  <tr><td><code>$MP0_AWD_CONTACT_SPORT</code></td></tr>
+                  <tr><td><code>$MP0_AWD_UNSTOPPABLE</code></td></tr>
+                  <tr><td><code>$MP0_CLUB_HOTSPOT</code></td></tr>
+                  <tr><td><code>$MP0_SR_TIER_1_REWARD</code></td></tr>
+                  <tr><td><code>$MP0_SR_TIER_3_REWARD</code></td></tr>
+                  <tr><td><code>$MP0_SR_INCREASE_THROW_CAP</code></td></tr>
+                  <tr><td><code>$MPPLY_AWD_GANGOPS_IAA</code></td></tr>
+                  <tr><td><code>$MPPLY_AWD_GANGOPS_SUBMARINE</code></td></tr>
+                  <tr><td><code>$MPPLY_AWD_GANGOPS_ALLINORDER</code></td></tr>
+                  <tr><td><code>$MPPLY_AWD_GANGOPS_LOYALTY</code></td></tr>
+                  <tr><td><code>$MPPLY_AWD_GANGOPS_CRIMMASMD</code></td></tr>
+                  <tr><td><code>$MPPLY_AWD_GANGOPS_MISSILE</code></td></tr>
+                  <tr><td><code>$MPPLY_AWD_GANGOPS_LOYALTY2</code></td></tr>
+                  <tr><td><code>$MPPLY_AWD_GANGOPS_LOYALTY3</code></td></tr>
+                  <tr><td><code>$MPPLY_AWD_GANGOPS_CRIMMASMD2</code></td></tr>
+                  <tr><td><code>$MPPLY_AWD_GANGOPS_CRIMMASMD3</code></td></tr>
+                  <tr><td><code>$MPPLY_AWD_GANGOPS_SUPPORT</code></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- WEAPON STATS -->
+        <section class="block" id="weapons">
+          <div class="section-head">
+            <span class="section-num">16</span>
+            <h2>Weapon &amp; Misc Stats</h2>
+            <span class="kicker">Bulk kill / shots / held-time</span>
+          </div>
+          <p class="lead">
+            The full per-weapon stat dump. Common values used below:
+            <strong>KILLS = 500</strong>, <strong>DEATHS = 100</strong>,
+            <strong>SHOTS/HITS/HEADSHOTS = 500</strong>,
+            <strong>HELDTIME / DB_HELDTIME = 5963259</strong>,
+            <strong>ENEMY_KILLS = 500</strong>. Where a stat is omitted for a
+            weapon (e.g. no HEADSHOTS for melee), it is not present in the
+            source dump.
+          </p>
+
+          <div class="stat-card">
+            <div class="stat-card-head">
+              <span class="stat-name">Misc Global Stats</span>
+              <h3>Gang / Mission / Job Counts</h3>
+            </div>
+            <div class="table-wrap" style="margin-bottom: 0; border: none">
+              <table>
+                <thead>
+                  <tr><th>Stat</th><th>Value</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><code>$MP0_KILLS_ENEMY_GANG_MEMBERS</code></td><td><span class="num">500</span></td></tr>
+                  <tr><td><code>$MP0_KILLS_FRIENDLY_GANG_MEMBERS</code></td><td><span class="num">500</span></td></tr>
+                  <tr><td><code>$MP0_CR_GANGATTACK_CITY</code></td><td><span class="num">500</span></td></tr>
+                  <tr><td><code>$MP0_CR_GANGATTACK_COUNTRY</code></td><td><span class="num">500</span></td></tr>
+                  <tr><td><code>$MP0_CR_GANGATTACK_LOST</code></td><td><span class="num">500</span></td></tr>
+                  <tr><td><code>$MP0_CR_GANGATTACK_VAGOS</code></td><td><span class="num">500</span></td></tr>
+                  <tr><td><code>$MPPLY_MISSIONS_CREATED</code></td><td><span class="num">500</span></td></tr>
+                  <tr><td><code>$MPPLY_LTS_CREATED</code></td><td><span class="num">500</span></td></tr>
+                  <tr><td><code>$MP0_HORDKILLS</code></td><td><span class="num">500</span></td></tr>
+                  <tr><td><code>$MP0_GHKILLS</code></td><td><span class="num">500</span></td></tr>
+                  <tr><td><code>$MP0_NO_NON_CONTRACT_RACE_WIN</code></td><td><span class="num">500</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-card-head">
+              <span class="stat-name">Per-Weapon Stats</span>
+              <h3>Kills · Shots · Hits · Heldtime · Enemy Kills</h3>
+            </div>
+            <p style="margin-top: 0; margin-bottom: 12px">
+              For each weapon below, set the listed suffixes to the standard
+              values noted above. Suffixes marked with a dash are not in the
+              source dump for that weapon.
+            </p>
+            <div class="table-wrap" style="margin-bottom: 0; border: none">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Weapon prefix ($MP0_)</th>
+                    <th>KILLS</th>
+                    <th>DEATHS</th>
+                    <th>SHOTS</th>
+                    <th>HITS</th>
+                    <th>HEAD<br />SHOTS</th>
+                    <th>HELD<br />TIME</th>
+                    <th>DB_HELD<br />TIME</th>
+                    <th>ENEMY<br />KILLS</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><code>DB_</code></td><td>500</td><td>—</td><td>500</td><td>500</td><td>500</td><td>596</td><td>—</td><td>500</td></tr>
+                  <tr><td><code>APPISTOL_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>SNSPISTOL_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>PISTOL50_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>SMG_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>ASLTSMG_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>BULLPUP_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>—</td><td>500</td></tr>
+                  <tr><td><code>PUMP_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>—</td><td>500</td></tr>
+                  <tr><td><code>SAWNOFF_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>FLAREGUN_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>STUNGUN_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>CMBTPISTOL_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>HOMLNCH_</code></td><td>500</td><td>100</td><td>500</td><td>—</td><td>—</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>GCLUB_</code></td><td>500</td><td>100</td><td>—</td><td>500</td><td>—</td><td>5963259</td><td>—</td><td>500</td></tr>
+                  <tr><td><code>MACHETE_</code></td><td>500</td><td>100</td><td>—</td><td>500</td><td>—</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>SHATCHET_</code></td><td>500</td><td>100</td><td>—</td><td>500</td><td>—</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>KNUCKLE_</code></td><td>500</td><td>100</td><td>—</td><td>500</td><td>—</td><td>5963259</td><td>—</td><td>500</td></tr>
+                  <tr><td><code>MG_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>596325</td><td>—</td><td>500</td></tr>
+                  <tr><td><code>COMBATPDW_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>596325</td><td>596325</td><td>500</td></tr>
+                  <tr><td><code>MICROSMG_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>596325</td><td>596325</td><td>500</td></tr>
+                  <tr><td><code>BATTLEAXE_</code></td><td>500</td><td>100</td><td>—</td><td>500</td><td>—</td><td>596325</td><td>596325</td><td>500</td></tr>
+                  <tr><td><code>MINISMG_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>596325</td><td>596325</td><td>500</td></tr>
+                  <tr><td><code>PRXMINE_</code></td><td>500</td><td>100</td><td>500</td><td>—</td><td>—</td><td>596325</td><td>596325</td><td>500</td></tr>
+                  <tr><td><code>HATCHET_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>596325</td><td>596325</td><td>500</td></tr>
+                  <tr><td><code>DAGGER_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>596325</td><td>596325</td><td>500</td></tr>
+                  <tr><td><code>BOTTLE_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>596325</td><td>596325</td><td>500</td></tr>
+                  <tr><td><code>CROWBAR_</code></td><td>500</td><td>100</td><td>—</td><td>500</td><td>—</td><td>596325</td><td>—</td><td>500</td></tr>
+                  <tr><td><code>BAT_</code></td><td>500</td><td>100</td><td>—</td><td>500</td><td>—</td><td>596325</td><td>—</td><td>500</td></tr>
+                  <tr><td><code>HAMMER_</code></td><td>500</td><td>100</td><td>—</td><td>500</td><td>—</td><td>596325</td><td>—</td><td>500</td></tr>
+                  <tr><td><code>NIGHTSTICK_</code></td><td>500</td><td>100</td><td>—</td><td>500</td><td>—</td><td>596325</td><td>—</td><td>500</td></tr>
+                  <tr><td><code>KNIFE_</code></td><td>500</td><td>100</td><td>—</td><td>500</td><td>—</td><td>596325</td><td>—</td><td>500</td></tr>
+                  <tr><td><code>UNARMED_</code></td><td>500</td><td>100</td><td>—</td><td>500</td><td>—</td><td>—</td><td>—</td><td>500</td></tr>
+                  <tr><td><code>MOLOTOV_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>—</td><td>596325</td><td>596325</td><td>500</td></tr>
+                  <tr><td><code>PIPEBOMB_</code></td><td>500</td><td>100</td><td>500</td><td>—</td><td>—</td><td>596325</td><td>596325</td><td>500</td></tr>
+                  <tr><td><code>GRENADE_</code></td><td>500</td><td>100</td><td>500</td><td>—</td><td>—</td><td>596325</td><td>596325</td><td>500</td></tr>
+                  <tr><td><code>SMKGRENADE_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>—</td><td>596325</td><td>596325</td><td>500</td></tr>
+                  <tr><td><code>MUSKET_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>596325</td><td>596325</td><td>500</td></tr>
+                  <tr><td><code>SPCARBINE_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>596325</td><td>596325</td><td>500</td></tr>
+                  <tr><td><code>ADVRIFLE_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>596325</td><td>—</td><td>500</td></tr>
+                  <tr><td><code>CRBNRIFLE_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>596325</td><td>—</td><td>500</td></tr>
+                  <tr><td><code>ASLTRIFLE_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>596325</td><td>—</td><td>500</td></tr>
+                  <tr><td><code>CMBTMG_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>596325</td><td>—</td><td>500</td></tr>
+                  <tr><td><code>BLRIFLE_MK2_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>PUMP_MK2_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>MKRIFLE_MK2_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>REV_MK2_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>SNSPIST_MK2_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>SPCARB_MK2_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>ASLTR_MK2_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>CBNR_MK2_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>CMBMG_MK2_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>HVYS_MK2_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>PIST_MK2_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>SMG_MK2_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>FLASHLIGHT_</code></td><td>500</td><td>100</td><td>—</td><td>500</td><td>—</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>FIREWRK_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>SWBLADE_</code></td><td>500</td><td>100</td><td>—</td><td>500</td><td>—</td><td>5963259</td><td>—</td><td>500</td></tr>
+                  <tr><td><code>GUSNBRG_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>POOLCUE_</code></td><td>500</td><td>100</td><td>—</td><td>500</td><td>—</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>GRNLAUNCH_</code></td><td>500</td><td>100</td><td>500</td><td>—</td><td>—</td><td>5963259</td><td>—</td><td>500</td></tr>
+                  <tr><td><code>HVYPISTOL_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>VPISTOL_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>REVOLVER_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>MKPISTOL_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>BULLRIFLE_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>AUTOSHGN_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>CMPGL_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>HVYSHGN_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>RAYMINIGUN_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>REV_NV_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>CERPST_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>REV_DA_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>MCHPIST_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>CMPRIFLE_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                  <tr><td><code>DBSHGN_</code></td><td>500</td><td>100</td><td>500</td><td>500</td><td>500</td><td>5963259</td><td>5963259</td><td>500</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p style="margin-top: 14px; margin-bottom: 0">
+              <strong>Example:</strong> for the AP Pistol, write
+              <code>$MP0_APPISTOL_KILLS</code>=500,
+              <code>$MP0_APPISTOL_DEATHS</code>=100,
+              <code>$MP0_APPISTOL_SHOTS</code>=500,
+              <code>$MP0_APPISTOL_HITS</code>=500,
+              <code>$MP0_APPISTOL_HEADSHOTS</code>=500,
+              <code>$MP0_APPISTOL_HELDTIME</code>=5963259,
+              <code>$MP0_APPISTOL_DB_HELDTIME</code>=5963259, and
+              <code>$MP0_APPISTOL_ENEMY_KILLS</code>=500.
+            </p>
+          </div>
+        </section>
+
+        <!-- JOB UNLOCKS -->
+        <section class="block" id="jobs">
+          <div class="section-head">
+            <span class="section-num">17</span>
+            <h2>Job Unlocks</h2>
+            <span class="kicker">Unique &amp; available jobs</span>
+          </div>
+          <p>
+            Set each of the following <strong>$MPPLY_</strong> stats to
+            <strong>300</strong> to unlock the corresponding job categories and
+            contact missions.
+          </p>
+          <div class="stat-card">
+            <div class="table-wrap" style="margin-bottom: 0; border: none">
+              <table>
+                <thead>
+                  <tr><th>Stat</th><th>Value</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><code>$MPPLY_UNIQUE_RACES</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_UNIQUE_DMS</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_UNIQUE_PARAS</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_UNIQUE_SURVIVAL</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_UNIQUE_MISSIONS</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_UNIQUE_LTS</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_UNIQUE_CTF</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_UNIQUE_VERSUS</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_AVAILABLE_RACES</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_AVAILABLE_DMS</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_AVAILABLE_PARAS</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_AVAILABLE_SURVIVAL</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_AVAILABLE_MISSIONS</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_AVAILABLE_LTS</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_AVAILABLE_CTF</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_AVAILABLE_VERSUS</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_UNIQUE_RACES_V</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_UNIQUE_DMS_V</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_UNIQUE_PARAS_V</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_UNIQUE_SURVIVAL_V</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_UNIQUE_MISSIONS_V</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_UNIQUE_LTS_V</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_UNIQUE_CTF_V</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_UNIQUE_VERSUS_V</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_AVAILABLE_RACES_V</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_AVAILABLE_DMS_V</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_AVAILABLE_PARAS_V</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_AVAILABLE_SURVIVAL_V</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_AVAILABLE_MISSIONS_V</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_AVAILABLE_LTS_V</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_AVAILABLE_CTF_V</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_AVAILABLE_VERSUS_V</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_UNIQUE_CONTACT_0</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_UNIQUE_CONTACT_1</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_UNIQUE_CONTACT_2</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_UNIQUE_CONTACT_3</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_UNIQUE_CONTACT_4</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_UNIQUE_CONTACT_5</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_UNIQUE_CONTACT_6</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_TOTAL_CONTACT_0</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_TOTAL_CONTACT_1</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_TOTAL_CONTACT_2</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_TOTAL_CONTACT_3</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_TOTAL_CONTACT_4</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_TOTAL_CONTACT_5</code></td><td><span class="num">300</span></td></tr>
+                  <tr><td><code>$MPPLY_TOTAL_CONTACT_6</code></td><td><span class="num">300</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- SAFETY -->
+        <section class="block" id="safety">
+          <div class="section-head">
+            <span class="section-num">18</span>
+            <h2>Detection &amp; Safety</h2>
+            <span class="kicker">Use at your own risk</span>
+          </div>
+          <div class="safety">
+            <h3>No cheat method is risk-free</h3>
+            <p>
+              Writing large numbers of stats at once — especially unrealistic
+              values — is more likely to flag your account. Play in
+              <strong>invite-only sessions</strong> with BattlEye disabled where
+              possible. Bulk-editing weapon stats, RP, and job counts in a
+              single session raises your detection risk. There is always a
+              chance of account action — use at your own discretion.
+            </p>
+          </div>
+        </section>
+
+        <!-- SOURCE -->
+        <section class="block" id="source">
+          <div class="section-head">
+            <span class="section-num">19</span>
+            <h2>Source &amp; Credit</h2>
+            <span class="kicker">Original findings</span>
+          </div>
+          <ul class="bullets">
+            <li>
+              Primary stat dumps:
+              <strong>pastebin.com/7CVECPZj</strong> and
+              <strong>pastebin.com/UUKpRNaJ</strong>.
+            </li>
+            <li>
+              "Unlock Everything (or at least 99%)" thread on UnKnoWnCheaTs
+              (post #622).
+            </li>
+            <li>
+              CEO office / biker club clutter and Doomsday heist status notes
+              from the UnKnoWnCheaTs GTA V section.
+            </li>
+            <li>
+              Darts stats reference: UnKnoWnCheaTs post #797. Level / RP gift
+              reference: post #691.
+            </li>
+          </ul>
+          <p>
+            This guide consolidates those community findings into the Social
+            Club guide format. Replace <strong>$MPx_</strong> with your
+            character slot before writing any stat.
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="foot-inner">
+        <div>© Community Guide · Not affiliated with Rockstar Games</div>
+        <div class="foot-links">
+          <a href="#">Top</a>
+          <a href="#reference">Quick Ref</a>
+          <a href="#safety">Safety</a>
+          <a href="../index.html">All Guides</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../assets/js/guide.js"></script>
+  </body>
+</html>
