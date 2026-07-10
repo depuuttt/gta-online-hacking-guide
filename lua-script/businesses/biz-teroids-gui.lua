@@ -2,7 +2,7 @@
 -- Original TinkerScript By ImagineNothing
 -- GUI version using YimMenuV2 ImGui menu API
 
-menu.set_menu_name("Biz-teroids GUI")
+menu.set_menu_name("Biz-teroids")
 natives.load_natives()
 
 local Biz = menu.get_submenu()
@@ -353,23 +353,28 @@ end
 
 -- ===== Category: Hangar & Warehouse =====
 local hwCat = Biz:add_category("Hangar & Warehouse")
-local hwSettings = hwCat:add_group("Settings", 1)
+
+local hwGeneral = hwCat:add_group("General Settings", 1)
+local hwHangar  = hwCat:add_group("Hangar Settings", 1)
+local hwWare    = hwCat:add_group("Warehouse Settings", 1)
 local hwActions = hwCat:add_group("Actions", 4)
 
-local sHGWHrestock = hwSettings:add_checkbox("biz_hgwh_restock", "Restock Hangar & Warehouse",
+local sHGWHrestock = hwGeneral:add_checkbox("biz_hgwh_restock", "Restock Hangar & Warehouse##setting",
     "Enable Hangar and Warehouse restocking for 'Run All'", true)
-local sHGWHmaxgoods = hwSettings:add_checkbox("biz_hgwh_maxgoods", "Instant Max Goods",
+local sHGWHmaxgoods = hwGeneral:add_checkbox("biz_hgwh_maxgoods", "Instant Max Goods",
     "Instantly max out stock. If disabled, restocks with mixed goods (slower).", true)
-local sHGsetgood = hwSettings:add_checkbox("biz_hg_setgood", "Set Hangar Goods Type",
+
+local sHGsetgood = hwHangar:add_checkbox("biz_hg_setgood", "Set Hangar Goods Type",
     "If enabled, uses the selected goods type for Hangar instead of random.", false)
 local sHGgoodtype = commandmgr.add_list_command("biz_hg_goodtype", "Hangar Goods Type",
     "Goods type for Hangar", HGgoodtypes, 6)
-hwSettings:add_list_command("biz_hg_goodtype")
-local sWHsetgood = hwSettings:add_checkbox("biz_wh_setgood", "Set Warehouse Goods Type",
+hwHangar:add_list_command("biz_hg_goodtype")
+
+local sWHsetgood = hwWare:add_checkbox("biz_wh_setgood", "Set Warehouse Goods Type",
     "If enabled, uses the selected goods type for Warehouse(s) instead of random.", false)
 local sWHgoodtype = commandmgr.add_list_command("biz_wh_goodtype", "Warehouse Goods Type",
     "Goods type for Warehouse(s)", WHgoodtypes, 6)
-hwSettings:add_list_command("biz_wh_goodtype")
+hwWare:add_list_command("biz_wh_goodtype")
 
 hwActions:add_button("biz_resthw", "Restock Hangar & Warehouse",
     "Restocks Hangar and Warehouse(s) using current settings.", function()
@@ -433,7 +438,7 @@ ncActions:add_button("biz_nc_pop", "Max Nightclub Popularity",
         DoNightclubPopularity()
     end)
 
-ncActions:add_button("biz_nc_goods", "Restock Nightclub Goods",
+ncActions:add_button("biz_nc_restock_goods", "Restock Nightclub Goods",
     "Restocks Nightclub goods.\nYou must re-assign your technicians afterwards.", function()
         if not RequireOnline() then return end
         DoNightclubGoods()
