@@ -1,28 +1,49 @@
-local set_stat = stats.set_int -- DJ1987
+--------------------------------------------------------------------------------
+-- SnackArmor
+--
+-- Automatically restores GTA Online consumable and armor stats to their maximum
+-- values. The script waits until a freemode session is detected (singleplayer
+-- is detected and the script idles until the player goes online), performs an
+-- initial top-up, then re-checks every `RELOAD_INTERVAL_MS` milliseconds and
+-- only writes stats that have dropped below their configured maximum.
+--
+-- API: YimMenuV2 Lua (`stats`, `notify`, `log`, `script`, `util`, `natives`).
+-- Original concept: DJ1987.
+--------------------------------------------------------------------------------
+
+---@diagnostic disable: undefined-global
+
+-- Local aliases for the global `stats` API (see docs/yimmenu_v2.lua).
+local set_stat = stats.set_int
 local get_stat = stats.get_int
 
--- Configuration
-local RELOAD_INTERVAL_MS = 300000 -- 5 minutes in milliseconds
+---Interval between periodic re-checks, in milliseconds (5 minutes).
+local RELOAD_INTERVAL_MS = 300000
 
--- Max values for each stat
+---Stat name -> maximum value mapping for every tracked consumable / armor.
+---Only stats found below their max are rewritten, which keeps the script
+---from hammering the stat system on every tick.
+---@type table<string, integer>
 local MAX_VALUES = {
-    ["MPX_NO_BOUGHT_YUM_SNACKS"] = 30, -- P's & Q's
-    ["MPX_NO_BOUGHT_HEALTH_SNACKS"] = 15, -- EgoChaser
-    ["MPX_NO_BOUGHT_EPIC_SNACKS"] = 5, -- Meteorite
-    ["MPX_NUMBER_OF_ORANGE_BOUGHT"] = 10, -- eCoLa
-    ["MPX_NUMBER_OF_BOURGE_BOUGHT"] = 10, -- [removed]wasser
-    ["MPX_NUMBER_OF_CHAMP_BOUGHT"] = 5, -- Blêuter'd Champagne
-    ["MPX_CIGARETTES_BOUGHT"] = 20, -- Smokes
-    ["MPX_NUMBER_OF_SPRUNK_BOUGHT"] = 10, -- Sprunk
-    ["MPX_MP_CHAR_ARMOUR_1_COUNT"] = 10, -- Super Light Armor
-    ["MPX_MP_CHAR_ARMOUR_2_COUNT"] = 10, -- Light Armor
-    ["MPX_MP_CHAR_ARMOUR_3_COUNT"] = 10, -- Standard Armor
-    ["MPX_MP_CHAR_ARMOUR_4_COUNT"] = 10, -- Heavy Armor
-    ["MPX_MP_CHAR_ARMOUR_5_COUNT"] = 10, -- Super Heavy Armor
-    ["MPX_BREATHING_APPAR_BOUGHT"] = 20 -- Rebreather
+    ["MPX_NO_BOUGHT_YUM_SNACKS"]      = 30, -- P's & Q's
+    ["MPX_NO_BOUGHT_HEALTH_SNACKS"]   = 15, -- EgoChaser
+    ["MPX_NO_BOUGHT_EPIC_SNACKS"]     = 5,  -- Meteorite
+    ["MPX_NUMBER_OF_ORANGE_BOUGHT"]   = 10, -- eCoLa
+    ["MPX_NUMBER_OF_BOURGE_BOUGHT"]   = 10, -- [removed]wasser
+    ["MPX_NUMBER_OF_CHAMP_BOUGHT"]    = 5,  -- Blêuter'd Champagne
+    ["MPX_CIGARETTES_BOUGHT"]         = 20, -- Smokes
+    ["MPX_NUMBER_OF_SPRUNK_BOUGHT"]   = 10, -- Sprunk
+    ["MPX_MP_CHAR_ARMOUR_1_COUNT"]    = 10, -- Super Light Armor
+    ["MPX_MP_CHAR_ARMOUR_2_COUNT"]    = 10, -- Light Armor
+    ["MPX_MP_CHAR_ARMOUR_3_COUNT"]    = 10, -- Standard Armor
+    ["MPX_MP_CHAR_ARMOUR_4_COUNT"]    = 10, -- Heavy Armor
+    ["MPX_MP_CHAR_ARMOUR_5_COUNT"]    = 10, -- Super Heavy Armor
+    ["MPX_BREATHING_APPAR_BOUGHT"]    = 20  -- Rebreather
 }
 
--- Helper function to get current game time in milliseconds
+---Return the current game timer in milliseconds via the `MISC.GET_GAME_TIMER`
+---native, or `nil` if the native is unavailable.
+---@return integer? timer_ms
 local function get_game_timer_ms()
     local ok, timer = pcall(function()
         if type(MISC) == "table" and MISC.GET_GAME_TIMER then
@@ -36,12 +57,14 @@ local function get_game_timer_ms()
     return nil
 end
 
--- Function to check if any stats are below max and reload if needed
--- Returns true if reload was performed, false otherwise
+---Scan every tracked stat; if any is below its max (or unreadable), rewrite all
+---stats to their maximum. The short-circuit scan avoids needless writes when
+---everything is already topped up.
+---@return boolean reloaded `true` if a reload was performed, `false` if all maxed.
 local function check_and_reload_snacks_and_armor()
     local needs_reload = false
 
-    -- Check each stat to see if it's below max
+    -- Short-circuit scan: stop as soon as one depleted stat is found.
     for stat_name, max_value in pairs(MAX_VALUES) do
         local ok, current_value = pcall(function()
             if stats and stats.get_int then
@@ -53,16 +76,15 @@ local function check_and_reload_snacks_and_armor()
         if ok and current_value ~= nil then
             if current_value < max_value then
                 needs_reload = true
-                break -- Found at least one below max, no need to check others
+                break
             end
         else
-            -- If we can't read the stat, assume it needs reload (safer)
+            -- Unreadable stat: treat as depleted so the player is topped up.
             needs_reload = true
             break
         end
     end
 
-    -- Only reload if needed
     if needs_reload then
         for stat_name, max_value in pairs(MAX_VALUES) do
             set_stat(stat_name, max_value)
@@ -73,7 +95,9 @@ local function check_and_reload_snacks_and_armor()
     return false
 end
 
--- Function to check if freemode script is running
+---Check whether the freemode script is currently running (i.e. the player is in
+---a GTA Online session). Uses `SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH`.
+---@return boolean? running `true`/`false` if determined, `nil` if the check failed.
 local function check_freemode_running()
     local ok, result = pcall(function()
         if type(SCRIPT) == "table" then
@@ -96,6 +120,9 @@ local function check_freemode_running()
 end
 
 -- Function to check if player is online using network natives (fallback)
+-- Returns true (online), false (offline), or nil (unknown) via
+-- `NETWORK.NETWORK_IS_SESSION_STARTED`; used when the freemode-thread check is
+-- inconclusive. Natives are loaded on demand.
 local function check_network_online()
     local ok, result = pcall(function()
         -- Load natives if needed
@@ -117,6 +144,19 @@ local function check_network_online()
     return nil
 end
 
+------------------------------------------------------------------------------
+-- Main entry point
+--
+-- 1. Log a startup banner and yield briefly for game initialization.
+-- 2. Determine whether a freemode (GTA Online) session is running. If the
+--    freemode-thread check is inconclusive, fall back to the network session
+--    native. If offline, log a warning once and poll until the player goes
+--    online.
+-- 3. After confirming an online session, yield 4 s for the session to settle,
+--    seed the timer, and perform an initial top-up.
+-- 4. Loop forever, re-checking every RELOAD_INTERVAL_MS and reloading only
+--    stats that have dropped below their maximum.
+------------------------------------------------------------------------------
 script.run_in_callback(function()
     log.info("==========================================================")
     log.info("================ SnackArmor Script Loaded ================")
@@ -191,7 +231,10 @@ script.run_in_callback(function()
         log.info("=========== All Items Maxed - Skipping Reload ============")
     end
 
-    -- Main loop - check and reload every 5 minutes if needed
+    -- Main loop - re-check and reload every RELOAD_INTERVAL_MS if needed.
+    -- The loop wakes every second to keep the timer responsive while only
+    -- performing the (relatively expensive) stat scan on the configured
+    -- interval.
     while true do
         local current_time = get_game_timer_ms()
 
