@@ -390,35 +390,36 @@ hwActions:add_button("biz_resthw", "Restock Hangar & Warehouse",
 
 -- ===== Category: MC Businesses =====
 local mcCat = Biz:add_category("MC Businesses")
-local mcSettings = mcCat:add_group("Settings", 1)
-local mcActions = mcCat:add_group("Actions", 4)
+local mcSettings    = mcCat:add_group("Settings", 1)
+local mcBulk        = mcCat:add_group("Bulk Actions", 4)
+local mcIndividual  = mcCat:add_group("Individual Restock", 4)
 
 local sMCresup = mcSettings:add_checkbox("biz_mc_resup", "Resupply All",
     "Enable MC Businesses resupply for 'Run All'", true)
 local sMCrestock = mcSettings:add_checkbox("biz_mc_restock", "Restock All",
     "Enable MC Businesses restock for 'Run All'", false)
 
-mcActions:add_button("biz_mc_resupply", "Resupply All MC Businesses",
+mcBulk:add_button("biz_mc_resupply", "Resupply All MC Businesses",
     "Replenishes supplies for all owned MC businesses.", function()
         if not RequireOnline() then return end
         DoResupplyMC()
     end)
 
-mcActions:add_button("biz_mc_restock_all", "Restock All MC Businesses",
+mcBulk:add_button("biz_mc_restock_all", "Restock All MC Businesses",
     "Restocks all owned MC businesses (Meth, Weed, Coke, Cash, Documents, Bunker, Acid Lab).", function()
         if not RequireOnline() then return end
         DoRestockAllMC()
     end)
 
 for idx, data in ipairs(MCBusinessData) do
-    mcActions:add_button("biz_mc_restock_" .. idx, "Restock " .. data.shortName,
+    mcIndividual:add_button("biz_mc_restock_" .. idx, "Restock " .. data.shortName,
         "Restocks " .. data.name .. ".\nYou must restart the business afterwards.", function()
             if not RequireOnline() then return end
             DoRestockMCBusiness(data)
         end)
 end
 
-mcActions:add_button("biz_mc_restock_acid", "Restock Acid Lab",
+mcIndividual:add_button("biz_mc_restock_acid", "Restock Acid Lab",
     "Restocks Acid Lab.\nYou must restart the business afterwards.", function()
         if not RequireOnline() then return end
         DoRestockAcidLab()
