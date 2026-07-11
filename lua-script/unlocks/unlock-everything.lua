@@ -5,6 +5,7 @@ script.run_in_callback(function()
     end
 end)
 -- Updated by ImagineNothing
+-- Batches stat writes in groups of 10 with a 30s delay between batches to avoid transaction errors.
 script.run_in_callback(function() -- Original script by ShinyWasabi
     natives.load_natives()
     local IsOnline = NETWORK.NETWORK_IS_SESSION_STARTED() and not NETWORK.NETWORK_IS_IN_TRANSITION() and
@@ -14,6 +15,26 @@ script.run_in_callback(function() -- Original script by ShinyWasabi
         notify.info("Original script by ShinyWasabi", "Updated by ImagineNothing")
         log.info("\n\27[37m\27[4;33mScript\27[m - \27[4;37mUnlockEverything\27[m\nInitialized successfully.")
         local is_player_male = ScriptGlobal(1574927):get_int() == 0
+        local _set_packed_bool_range = stats.set_packed_bool_range
+        local _set_packed_int = stats.set_packed_int
+        local _set_packed_bool = stats.set_packed_bool
+        local _set_int = stats.set_int
+        local _set_bool = stats.set_bool
+        local _set_float = stats.set_float
+        local stat_count = 0
+        local function batch_yield()
+            stat_count = stat_count + 1
+            if stat_count % 10 == 0 then
+                notify.info("UnlockEverything", string.format("Batch %d complete, waiting 30s...", stat_count / 10))
+                script.yield(30000)
+            end
+        end
+        stats.set_packed_bool_range = function(...) _set_packed_bool_range(...); batch_yield() end
+        stats.set_packed_int = function(...) _set_packed_int(...); batch_yield() end
+        stats.set_packed_bool = function(...) _set_packed_bool(...); batch_yield() end
+        stats.set_int = function(...) _set_int(...); batch_yield() end
+        stats.set_bool = function(...) _set_bool(...); batch_yield() end
+        stats.set_float = function(...) _set_float(...); batch_yield() end
         stats.set_packed_bool_range(110, 113, true) -- Red Check Pajamas, Green Check Pajamas, Black Check Pajamas, I Heart LC T-shirt
         stats.set_packed_bool_range(115, 115, true) -- Roosevelt
         stats.set_packed_bool_range(124, 124, true) -- Sanctus
@@ -1527,6 +1548,13 @@ script.run_in_callback(function() -- Original script by ShinyWasabi
         stats.set_packed_bool_range(36941, 36942, true)            -- Own 50 weapons / Visit the Gun Van every day for 10 days
         stats.set_int("MPX_PROG_HUB_10_CHAL_ANSR", 10, true)       -- Win 10 Challenges against another player in the Ammu-Nation Shooting Range
         stats.set_packed_bool_range(15456, 15460, true)            -- Unlock all Mk II ammo types
+        stats.set_packed_bool_range = _set_packed_bool_range
+        stats.set_packed_int = _set_packed_int
+        stats.set_packed_bool = _set_packed_bool
+        stats.set_int = _set_int
+        stats.set_bool = _set_bool
+        stats.set_float = _set_float
+        notify.info("UnlockEverything", string.format("All %d stat writes complete.", stat_count))
         script.yield(1500)
         notify.success("WasabiWordsTM", "Clichés Subverted")
     else
