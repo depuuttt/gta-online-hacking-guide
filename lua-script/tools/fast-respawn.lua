@@ -1,15 +1,12 @@
 script.run_in_callback(function()
     log.info("\n\27[37m\27[4;33mScript\27[m - \27[4;37mFast Respawn\27[m\nInitialized successfully.")
-    local logresp = {"Wasted Screen Skipped!", "Player Respawned a thousand times!", "Fast-Respawn!",
-                     "mp_forcerespawnpla... oops, wrong game.", "Had to make the script longer somehow.",
-                     "I Need Healing!", "Couldn't find a way to respawn in the same spot, sry." -- ,
-    -- "Moar text"
-    }
+    local logresp = {"Wasted screen skipped.", "Player respawned.", "Fast respawn triggered.",
+                     "Forced respawn.", "Death sequence bypassed.", "Respawn acknowledged."}
     local n = #logresp
     local WASTED_GLOBAL = ScriptGlobal(2658294 + 1 + 236)
     local RESPAWN_GLOBAL = ScriptGlobal(2635562 + 2924)
     local was_wasted = false
-    while true do -- Original TinkerScript by ImagineNothing
+    while true do
         local is_wasted = WASTED_GLOBAL:get_int() == -1
         if is_wasted and not was_wasted then
             RESPAWN_GLOBAL:set_int(1)
@@ -19,3 +16,6 @@ script.run_in_callback(function()
         script.yield()
     end
 end)
+
+-- Credits:
+-- ImagineNothing | Original TinkerScript
